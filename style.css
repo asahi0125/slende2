@@ -1,0 +1,365 @@
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      scroll-behavior: smooth;
+      background-image: url('img/paper_texture.png'); /* 薄い和紙風など */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+    }
+    /* .hero {
+      background-image: url('https://picsum.photos/1920/1080?grayscale');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    } */
+    /* .hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+} */
+ .hero-section {
+  background-image: url('img/sprende.jpg'); /* 画像パス */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* 少し暗めでテキスト浮かせる */
+  width: 100%;
+  height: 100%;
+}
+.hero > div {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1, .hero-section p {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+
+
+.btn-gold {
+  background: linear-gradient(to right, #d4af37, #c5a100);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background: linear-gradient(to right, #c5a100, #d4af37);
+  transform: scale(1.05);
+}
+
+h1, .display-4 {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 1px;
+}
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .section {
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .navbar {
+  transition: background 0.3s;
+}
+.navbar .nav-link.active {
+  font-weight: bold;
+  color: gold !important;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+      font-size: 2rem;
+      font-weight: 700;
+
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 2px;
+      background: goldenrod;
+    }
+
+    .ribbon {
+      position: absolute;
+      top: 10px; left: -10px;
+      background: crimson;
+      color: white;
+      padding: 5px 15px;
+      transform: rotate(-45deg);
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .card { position: relative; }
+
+    .card-title:first-child {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+
+    .card-body p.fw-bold {
+      font-family: 'Noto Serif JP', serif;
+      color: goldenrod;
+      font-size: 1.1rem;
+    }
+    
+    .menu-card {
+      border: 1px solid #d4af37;
+      border-radius: 16px;
+      background: linear-gradient(to bottom right, #fffef8, #fdf6e3);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    .menu-card:hover {
+      transform: scale(1.04);
+    }
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #5c3d2e;
+    }
+    .card-body p.fw-bold {
+      color: goldenrod;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    #insta-gallery img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+#insta-gallery img:hover {
+  transform: scale(1.05);
+}
+
+   .map-card {
+      max-width: 800px;
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      border: 2px solid goldenrod;
+    }
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .store-info p {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .store-info strong {
+      color: #333;
+      font-weight: 600;
+    }
+
+
+
+
+
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: #bbb;
+      margin: 0 10px;
+    }
+
+   .footer a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: #444;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+ .footer a:hover {
+        color: white;
+        transform: scale(1.2);}
+
+.footer a i {
+  font-size: 1.4rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+/* Instagramだけグラデーション */
+.footer a.instagram {
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf);
+} 
+/* Facebook公式カラー */
+.footer a.facebook {
+  background-color: #1877F2;
+}
+
+/* Twitter公式カラー */
+.footer a.twitter {
+  background-color: #1DA1F2;
+}
+
+/* ホバー時の動き・色変化 */
+.footer a:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.fixed-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  z-index: 999;
+}
+
+
+
+
+
+    @media (max-width: 576px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .card-body {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 992px) {
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 1rem;
+  }
+
+  .btn-gold {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-body p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p.lead {
+    font-size: 0.95rem;
+  }
+
+  .map-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .footer a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .footer a i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .btn-gold {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.95rem;
+    padding: 8px 10px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+
+
