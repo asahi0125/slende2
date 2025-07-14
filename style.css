@@ -7,25 +7,7 @@
       background-attachment: fixed;
 
     }
-    /* .hero {
-      background-image: url('https://picsum.photos/1920/1080?grayscale');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-    } */
-    /* .hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-  z-index: 1;
-} */
+
  .hero-section {
   background-image: url('img/sprende.jpg'); /* 画像パス */
   background-size: cover;
@@ -51,7 +33,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    background-attachment: scroll; 
+    background-attachment: fixed; 
     background-size: cover;
     background-position: center;
   }
@@ -138,51 +120,155 @@ h1, .display-4 {
       font-size: 0.8rem;
       font-weight: bold;
     }
-    .card { position: relative; }
 
-    .card-title:first-child {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8rem;
-      color: #333;
-    }
-
-
-    .card-body p.fw-bold {
-      font-family: 'Noto Serif JP', serif;
-      color: goldenrod;
-      font-size: 1.1rem;
-    }
-    
-    .menu-card {
-      border: 1px solid #d4af37;
-      border-radius: 16px;
-      background: linear-gradient(to bottom right, #fffef8, #fdf6e3);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      transition: transform 0.4s ease;
-    }
-    .menu-card:hover {
-      transform: scale(1.04);
-    }
-    .card-title {
+        /* タブUI整形 */
+    .nav-tabs .nav-link {
       font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: #5c3d2e;
-    }
-    .card-body p.fw-bold {
-      color: goldenrod;
       font-size: 1.1rem;
-      font-weight: 600;
+      color: #444;
+      border: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .nav-tabs .nav-link.active {
+      color: #000;
+      border-bottom: 2px solid #d4af37; /* ゴールド系 */
+      font-weight: bold;
     }
 
-    #insta-gallery img {
+    /* 共通：カード画像比率 */
+.card-img-top {
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* メニューセクションのカードサイズ固定 */
+#menu .card-img-top {
+  height: 220px;
+}
+
+/* カードデザイン共通 */
+.card {
+  position: relative;
+  border: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  background: #fffef8;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* カードタイトル（英語） */
+.card-title.english {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  color: #5c3d2e;
+  margin-bottom: 0.2rem;
+}
+
+/* カードタイトル（日本語） */
+.card-title.jp {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* 説明文 */
+.card-text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 金額 */
+.card-price {
+  font-family: 'Noto Serif JP', serif;
+  color: goldenrod;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.card {
   transition: transform 0.3s ease;
 }
-#insta-gallery img:hover {
-  transform: scale(1.05);
+.card:hover {
+  transform: scale(1.03);
 }
+
+.menu-card {
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+  background: linear-gradient(to bottom right, #fffef3, #fdf7e8);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.03);
+}
+
+.menu-card .card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 220px;
+}
+
+.menu-card h5.card-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #4b2e2e;
+}
+
+.menu-card p.jp-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.menu-card p.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.menu-card .fw-bold {
+  font-size: 1.1rem;
+  color: goldenrod;
+  font-weight: bold;
+}
+
+    
+
+      #insta-gallery {
+        display: flex;
+        gap: 15px;
+      }
+
+          #insta-gallery img {
+        width: 100%;
+        height: 200px; /* ← 高さを固定で与えることで、object-fitが正常動作する */
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        border-radius: 8px;
+      }
+      #insta-gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        #insta-gallery img {
+          height: 150px;
+        }
+      }
 
    .map-card {
       max-width: 800px;
@@ -208,76 +294,123 @@ h1, .display-4 {
     }
 
 
-
-
-
     .footer {
       background-color: #333;
       color: white;
       padding: 40px 0;
     }
-    .footer a {
-      color: #bbb;
-      margin: 0 10px;
-    }
 
-   .footer a {
-  display: inline-block;
+.footer-sns a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
   margin: 0 8px;
   border-radius: 50%;
-  background-color: #444;
-  text-align: center;
-  line-height: 50px;
-  transition: all 0.3s ease;
-}
-
- .footer a:hover {
-        color: white;
-        transform: scale(1.2);}
-
-.footer a i {
   font-size: 1.4rem;
   color: white;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-/* Instagramだけグラデーション */
-.footer a.instagram {
+/* 個別スタイル */
+.footer-sns a.instagram {
   background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf);
-} 
-/* Facebook公式カラー */
-.footer a.facebook {
+}
+
+.footer-sns a.facebook {
   background-color: #1877F2;
 }
 
-/* Twitter公式カラー */
-.footer a.twitter {
-  background-color: #1DA1F2;
+.footer-sns a.x {
+  background-color: #000;
 }
 
-/* ホバー時の動き・色変化 */
-.footer a:hover {
+.footer-sns a.tiktok {
+  background: linear-gradient(135deg, #69C9D0 0%, #EE1D52 100%);
+}
+
+/* Hover Effects */
+.footer-sns a:hover {
   transform: scale(1.1);
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
-.fixed-cta-bar {
+
+.footer-sns a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.sticky-cta {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
+  bottom: 20px;
+  right: 20px;
   z-index: 999;
+  border-radius: 50%;
+  background-color: transparent; /* 透明で下地の白抜けを防ぐ */
 }
 
+.btn-reserve-sm {
+  background: linear-gradient(145deg, #c5a100, #d4af37);
+  color: white;
+  border: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
 
+.btn-reserve-sm::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 60%);
+  transition: opacity 0.5s, transform 0.5s;
+  opacity: 0;
+}
 
+.btn-reserve-sm:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.btn-reserve-sm:hover {
+  transform: scale(1.08);
+  background: linear-gradient(145deg, #d4af37, #c5a100);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes gentlePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+}
+
+.btn-reserve-sm.attention {
+  animation: gentlePulse 3s ease-in-out infinite;
+}
 
 
     @media (max-width: 576px) {
