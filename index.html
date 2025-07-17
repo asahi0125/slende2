@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Osteria SPLENDEは愛媛県松山市のクラシカル×モダンなイタリアンダイニング。旬の食材を使ったコース料理で特別なひとときを。">
+  <meta name="description" content="松山・三番町。料理人が現場に立つ、静かで熱いイタリアン。語らず、気配で魅せる店。Osteria SPLENDE。">
   <meta name="keywords" content="イタリアン, 松山, ディナー, コース料理, Osteria SPLENDE">
-  <title>イタリアンダイニング</title>
+  <title>Osteria SPLENDE｜松山・三番町のクラシカル×モダンなイタリアン</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <!-- 確認しよう -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,6 +29,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#hero">トップ</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">私たちについて</a></li>
         <li class="nav-item"><a class="nav-link" href="#menu">メニュー</a></li>
         <li class="nav-item"><a class="nav-link" href="#news">お知らせ</a></li>
@@ -35,34 +41,59 @@
 
 <header id="hero" class="hero-section">
   <div class="hero-overlay d-flex align-items-center justify-content-center">
-    <div class="text-center text-white">
-      <h1 class="display-4 fw-bold" data-aos="fade-up">Osteria SPLENDE</h1>
-      <p class="lead" data-aos="fade-up" data-aos-delay="100">クラシカル×モダンなイタリアン</p>
-      <a href="#access" class="btn btn-gold mt-3">ご予約はこちら</a>
+    <div class="text-center text-white px-4">
+      
+      <!-- ブランドアイデンティティ -->
+      <p class="mb-2 text-white-50" data-aos="fade-up" style="font-size: 1rem; letter-spacing: 0.5px;">
+        料理人が、現場に立ち続ける店。
+      </p>
+      <h1 class="display-3 fw-bold mb-3" style="font-family: 'Cormorant Garamond', serif;" data-aos="fade-up">
+        Osteria SPLENDE
+      </h1>
+      <!-- キャッチコピー -->
+      <p class="lead fst-italic opacity-75" data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem;">
+        静かに始まり、気づけば深く息をしていた。
+      </p>
+      <!-- CTAボタン -->
+      <a href="#access" class="btn btn-gold mt-4 px-4 py-2" style="font-size: 1rem;">
+        ご予約はこちら
+      </a>
     </div>
   </div>
 </header>
 
-<section class="section bg-light" id="about">
+
+<!-- About Section -->
+<section class="section bg-light" id="about" style="font-family: 'Zen Maru Gothic', sans-serif;">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6" data-aos="fade-right">
-        <img src="img/restaurant_inside.webp" alt="店内" class="img-fluid rounded">
+        <img src="img/about_splende.webp" alt="店内" class="img-fluid rounded">
       </div>
       <div class="col-md-6" data-aos="fade-left">
-        <h2>私たちのこだわり</h2>
-        <p>素材と手間を惜しまない料理づくり。イタリアの伝統と日本のおもてなしを融合させた空間でお待ちしています。</p>
+        <h2 class="mb-4">私たちのこだわり</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+          素材に向き合い、<br>
+          空間を整え、<br>
+          時間を惜しまず、<br>
+          ひと皿ひと皿に気持ちを込めています。<br><br>
+          ふとした瞬間に、<br>
+          なにかが伝わるように。<br><br>
+          そんなひとときを、ここで。
+        </p>
       </div>
     </div>
   </div>
 </section>
+
 
 <section class="section" id="menu">
   <div class="container">
     <h2 class="section-title text-center mb-5">人気のメニュー</h2>
 
     <!-- タブナビ -->
-    <ul class="nav nav-tabs justify-content-center mb-4" id="menuTab" role="tablist">
+    <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
+
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="lunch-tab" data-bs-toggle="tab" data-bs-target="#lunch" type="button" role="tab">ランチ</button>
       </li>
@@ -78,129 +109,142 @@
     <div class="tab-content" id="menuTabContent">
 
      
-      <div class="tab-pane fade show active" id="lunch" role="tabpanel">
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="zoom-in">
-            <div class="card menu-card h-100">
-              <img src="img/menu1.jpg" class="card-img-top" alt="日替わりランチ" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Lunch Set of the Day</h5>
-                <p class="jp-title">日替わりランチ</p>
-                <p class="card-text">旬の食材を使った日替わりセット</p>
-                <p class="fw-bold">¥1,650</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card menu-card h-100">
-              <img src="img/iwashi-pasta.jpg" class="card-img-top" alt="イワシパスタ" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Seasonal Sardine Pasta</h5>
-                <p class="jp-title">イワシの季節パスタ</p>
-                <p class="card-text">地元食材を使用した人気の一品</p>
-                <p class="fw-bold">¥1,980</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card menu-card h-100">
-              <img src="img/seafoodpasta.jpg" class="card-img-top" alt="シーフードパスタ" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Luxury Seafood Pasta</h5>
-                <p class="jp-title">贅沢シーフードパスタ</p>
-                <p class="card-text">海の幸をたっぷり使った特製パスタ</p>
-                <p class="fw-bold">¥2,200</p>
-              </div>
-            </div>
-          </div>
+     <div class="tab-pane fade show active" id="lunch" role="tabpanel">
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card menu-card h-100">
+        <img src="img/sea_urchin_toast_blossom.jpg" class="card-img-top" alt="ウニトーストの花咲き盛り" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Sea Urchin Toast Blossom</h5>
+          <p class="jp-title">雲丹のトースト・花仕立て</p>
+          <p class="card-text">見た目も美しい、濃厚な海の香り</p>
+          <p class="fw-bold">¥1,980</p>
         </div>
       </div>
+    </div>
+
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card menu-card h-100">
+        <img src="img/iwashi-pasta.jpg" class="card-img-top" alt="イワシのパスタ" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Seasonal Sardine Pasta</h5>
+          <p class="jp-title">イワシの季節パスタ</p>
+          <p class="card-text">地元鮮魚で仕上げる香ばしい一皿</p>
+          <p class="fw-bold">¥1,880</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card menu-card h-100">
+        <img src="img/shirasu_cream_mountain.jpg" class="card-img-top" alt="しらすクリームマウンテン" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Shirasu Cream Mountain</h5>
+          <p class="jp-title">しらすのクリームパスタ</p>
+          <p class="card-text">山のように盛られた白銀の旨み</p>
+          <p class="fw-bold">¥1,780</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
       
-      <div class="tab-pane fade" id="dinner" role="tabpanel">
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="zoom-in">
-            <div class="card menu-card h-100">
-              <img src="img/course2.webp" class="card-img-top" alt="フルディナーコース" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Chef’s Special Dinner Course</h5>
-                <p class="jp-title">シェフおすすめコース</p>
-                <p class="card-text">旬と感性が響きあう、贅沢な夜のフルコース</p>
-                <p class="fw-bold">¥9,680</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card menu-card h-100 position-relative">
-              <div class="ribbon">おすすめ</div>
-              <img src="img/splende_night.webp" class="card-img-top" alt="乾杯ディナー" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Dinner with Toast</h5>
-                <p class="jp-title">乾杯から始まる至福のディナー</p>
-                <p class="card-text">乾杯ドリンク付きのお得なセット</p>
-                <p class="fw-bold">¥6,980</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card menu-card h-100">
-              <img src="img/big_table.webp" class="card-img-top" alt="カジュアルディナー" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Casual Italian Night</h5>
-                <p class="jp-title">本格イタリアン×カジュアルコース</p>
-                <p class="card-text">2時間飲み放題付き・6皿構成の特別プラン</p>
-                <p class="fw-bold">¥8,000</p>
-              </div>
-            </div>
-          </div>
+    <div class="tab-pane fade" id="dinner" role="tabpanel">
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card menu-card h-100">
+        <img src="img/splende_chef_recommend_course_2025.jpg" class="card-img-top" alt="フルディナーコース" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Chef’s Signature Course</h5>
+          <p class="jp-title">シェフ渾身のコース</p>
+          <p class="card-text">美しさと旨さを兼ね備えた珠玉の皿たち</p>
+          <p class="fw-bold">¥9,800</p>
         </div>
       </div>
+    </div>
 
-     
-      <div class="tab-pane fade" id="drink" role="tabpanel">
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="zoom-in">
-            <div class="card menu-card h-100">
-              <img src="img/wine.jpg" class="card-img-top" alt="厳選ワイン" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Wine Selection</h5>
-                <p class="jp-title">厳選ワインセレクション</p>
-                <p class="card-text">1000本から選べる、料理に合う1本</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card menu-card h-100">
-              <img src="img/wines.jpg" class="card-img-top" alt="ワイン棚" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Wine Cellar</h5>
-                <p class="jp-title">圧巻のセラー棚</p>
-                <p class="card-text">ワインの世界観を空間ごと楽しめる</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card menu-card h-100">
-              <img src="img/winwseller.jpg" class="card-img-top" alt="セラー内観" loading="lazy">
-              <div class="card-body">
-                <h5 class="card-title">Cellar Experience</h5>
-                <p class="jp-title">セラーでの体験</p>
-                <p class="card-text">落ち着いた空間でワインと料理を堪能</p>
-              </div>
-            </div>
-          </div>
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card menu-card h-100 position-relative">
+        <div class="ribbon">おすすめ</div>
+        <img src="img/splende_pan_fry_flame_action.jpg" class="card-img-top" alt="フランベ演出付きコース" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Flambé Experience Course</h5>
+          <p class="jp-title">炎の演出付きコース</p>
+          <p class="card-text">五感で味わう劇場型イタリアン</p>
+          <p class="fw-bold">¥7,800</p>
         </div>
       </div>
+    </div>
+
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card menu-card h-100">
+        <img src="img/steak.jpg" class="card-img-top" alt="本格赤身ステーキコース" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Premium Steak Course</h5>
+          <p class="jp-title">本格赤身ステーキコース</p>
+          <p class="card-text">ジューシーな旨みで満たされる特別な夜</p>
+          <p class="fw-bold">¥8,500</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="tab-pane fade" id="drink" role="tabpanel">
+  <div class="row g-4">
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="card menu-card h-100">
+        <img src="img/wineseller.jpg" class="card-img-top" alt="ワインセラー内観" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Sommelier's Choice</h5>
+          <p class="jp-title">ソムリエの厳選</p>
+          <p class="card-text">その夜の料理に合う1本を、1000本の中からご提案。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card menu-card h-100">
+        <img src="img/splende_bottles_closeup_winewall.jpg" class="card-img-top" alt="ワインボトルの壁" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Wine Wall Library</h5>
+          <p class="jp-title">ワインの図書館</p>
+          <p class="card-text">一本一本にストーリーがある、眺めるだけで酔いそうな棚。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card menu-card h-100">
+        <img src="img/wine seller2.webp" class="card-img-top" alt="ソムリエセレクション" loading="lazy">
+        <div class="card-body">
+          <h5 class="card-title">Splende Wine Moment</h5>
+          <p class="jp-title">至福の1杯</p>
+          <p class="card-text">「この店を選んでよかった」と言わせる一杯を。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+   <div class="menu-cta text-center mt-5">
+  <a href="/lp/index.html" class="cta-button-gold">お店について</a>
+</div>
+    
 
     </div> <!-- /.tab-content -->
   </div> <!-- /.container -->
 </section>
 <section class="section bg-light" id="instagram">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Instagram</h2>
   <div class="insta-gallery" id="insta-gallery">
-  <img src="img/dummy1.jpg" alt="insta1">
-  <img src="img/dummy2.jpg" alt="insta2">
-  <img src="img/dummy3.jpg" alt="insta3">
-  <img src="img/dummy4.jpg" alt="insta4"> <!-- ← 枚数は増減自由 -->
+  <img src="img/instagramqrcode.jpg" alt="insta1">
+  <img src="img/instagramqrcode.jpg" alt="insta2">
+  <img src="img/instagramqrcode.jpg" alt="insta3">
+  <img src="img/instagramqrcode.jpg" alt="insta4"> <!-- ← 枚数は増減自由 -->
+</div>
 </div>
 </section>
 
@@ -256,6 +300,13 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: { el: '.swiper-pagination' },
+  });
+</script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -265,13 +316,11 @@
   });
   new bootstrap.ScrollSpy(document.body, { target: '#navbar', offset: 80 });
 </script>
-<div class="sticky-cta shadow">
-  <a href="#access">
-  <button class="btn btn-reserve-sm">
-    <i class="fas fa-calendar-check"></i>
-  </button>
+<div class="sticky-cta">
+  <a href="/lp/index.html" class="cta-button">
+    <div class="cta-icon"><i class="fas fa-utensils"></i></div>
+    <div class="cta-text">料理をもっと知る</div>
   </a>
 </div>
-
 </body>
 </html>

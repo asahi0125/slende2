@@ -1,7 +1,7 @@
     body {
       font-family: 'Noto Sans JP', sans-serif;
       scroll-behavior: smooth;
-      background-image: url('img/paper_texture.png'); /* 薄い和紙風など */
+      background-image: url('img/food/paper_texture.png'); /* 薄い和紙風など */
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -9,7 +9,7 @@
     }
 
  .hero-section {
-  background-image: url('img/sprende.jpg'); /* 画像パス */
+  background-image: url('img/splende_nightmode_glowup.jpg'); /* 画像パス */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -18,10 +18,12 @@
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* 少し暗めでテキスト浮かせる */
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
 }
+
+
 .hero > div {
   position: relative;
   z-index: 2;
@@ -30,6 +32,15 @@
 .hero-section h1, .hero-section p {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
+.hero-overlay .text-center h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.hero-overlay .text-center p.lead {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
 
 @media (max-width: 768px) {
   .hero-section {
@@ -44,8 +55,8 @@
   background: linear-gradient(to right, #d4af37, #c5a100);
   color: white;
   border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.1rem;
   border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
@@ -136,88 +147,75 @@ h1, .display-4 {
       font-weight: bold;
     }
 
+
+    .menu-tabs .nav-link.active {
+      background-color: #fff9e9;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #3d2b1f;
+      box-shadow: inset 0 -2px 0 goldenrod;
+      padding: 0.5rem 1rem;
+    }
+    .menu-tabs .nav-link:hover {
+      background-color: #fdf5dc;
+    }
     /* 共通：カード画像比率 */
+/* --------------------------
+ 📷 カード画像の基本スタイル
+--------------------------- */
 .card-img-top {
   aspect-ratio: 3 / 2;
   object-fit: cover;
   width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* メニューセクションのカードサイズ固定 */
-#menu .card-img-top {
   height: 220px;
-}
-
-/* カードデザイン共通 */
-.card {
-  position: relative;
-  border: none;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: transform 0.4s ease;
-  background: #fffef8;
-}
-.card:hover {
-  transform: scale(1.02);
-}
-
-/* カードタイトル（英語） */
-.card-title.english {
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.6rem;
-  color: #5c3d2e;
-  margin-bottom: 0.2rem;
-}
-
-/* カードタイトル（日本語） */
-.card-title.jp {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-/* 説明文 */
-.card-text {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* 金額 */
-.card-price {
-  font-family: 'Noto Serif JP', serif;
-  color: goldenrod;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: right;
-}
-
-.card {
+  border-radius: 6px;
   transition: transform 0.3s ease;
 }
-.card:hover {
-  transform: scale(1.03);
+.card-img-top:hover {
+  transform: scale(1.015);
 }
 
+/* --------------------------
+ 🏷️ タブタイトル（用途分離）
+--------------------------- */
+.tab-title.jp {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #3a2e28;
+  text-shadow: 0.5px 0.5px #fffaf0;
+}
+
+.tab-title.en {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  font-style: italic;
+  color: #4e342e;
+}
+
+/* --------------------------
+ 🍽️ メニューカードデザイン
+--------------------------- */
 .menu-card {
   border: 1px solid #d4af37;
-  border-radius: 12px;
+  border-radius: 16px;
   background: linear-gradient(to bottom right, #fffef3, #fdf7e8);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .menu-card:hover {
   transform: scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
-.menu-card .card-img-top {
-  object-fit: cover;
-  width: 100%;
-  height: 220px;
+/* --------------------------
+ 📝 テキストの階層と余白
+--------------------------- */
+.menu-card .card-body {
+  padding: 1.2rem 1.4rem;
 }
 
 .menu-card h5.card-title {
@@ -231,20 +229,53 @@ h1, .display-4 {
   font-family: 'Noto Serif JP', serif;
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 0.4rem;
   color: #333;
+  margin-bottom: 0.4rem;
 }
 
 .menu-card p.card-text {
   font-size: 0.95rem;
   color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+.card-img-top{
+  height: 280px;
 }
 
+.menu-card .card-price,
 .menu-card .fw-bold {
+  font-family: 'Noto Serif JP', serif;
+  color: #b58900;
   font-size: 1.1rem;
-  color: goldenrod;
-  font-weight: bold;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
+
+.cta-button-gold {
+  display: inline-block;
+  margin-top: 2.5rem; /* ← ここで上の余白調整 */
+  padding: 0.75em 2em;
+  font-size: 1.05rem;
+  font-family: 'Libre Baskerville', serif;
+  color: #fff;
+  background-color: #bfa76f;
+  border: 1px solid #bfa76f;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.05em;
+  text-decoration: none; 
+}
+
+.cta-button-gold:hover {
+  background-color: #d6be89;
+  box-shadow: 0 6px 16px rgba(191, 167, 111, 0.4);
+  color: #fff;
+  text-decoration: none; /* 念のためホバー時も明示的に消す */
+}
+
 
    #insta-gallery {
   display: flex;
@@ -347,20 +378,47 @@ h1, .display-4 {
   opacity: 0.9;
 }
 
+.cta-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(145deg, #bfa76f, #8b793d);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  font-size: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-icon {
+  font-size: 1.3rem;
+  margin-bottom: 2px;
+}
+
+.cta-text {
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
 
 .sticky-cta {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   z-index: 999;
-  border-radius: 50%;
-  background-color: transparent; /* 透明で下地の白抜けを防ぐ */
+  text-align: center;
 }
 
 .btn-reserve-sm {
   background: linear-gradient(145deg, #c5a100, #d4af37);
   color: white;
-  border: none;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -373,6 +431,7 @@ h1, .display-4 {
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
+  border: 2px solid white; 
 }
 
 .btn-reserve-sm::before {
@@ -398,6 +457,23 @@ h1, .display-4 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
+/* ラベル調整 */
+.cta-label {
+  font-size: 0.65rem;
+  color: white;
+  margin-top: 6px;
+  display: none;
+  text-align: center;
+}
+
+/* スマホ時に表示 */
+@media (max-width: 768px) {
+  .cta-label {
+    display: block;
+  }
+}
+
+/* アニメーション（お好みで） */
 @keyframes gentlePulse {
   0% {
     transform: scale(1);
@@ -416,6 +492,7 @@ h1, .display-4 {
 .btn-reserve-sm.attention {
   animation: gentlePulse 3s ease-in-out infinite;
 }
+
 
 
     @media (max-width: 576px) {
@@ -506,6 +583,17 @@ h1, .display-4 {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 768px) {
+  .btn-reserve-sm {
+    width: 64px;
+    height: 64px;
+    font-size: 1.5rem;
+  }
 
+  .sticky-cta {
+    bottom: 100px;
+    right: 20px;
+  }
+}
 
 
