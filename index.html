@@ -109,127 +109,137 @@
     <div class="tab-content" id="menuTabContent">
 
      
-     <div class="tab-pane fade show active" id="lunch" role="tabpanel">
-  <div class="row g-4">
-    <div class="col-md-4" data-aos="zoom-in">
-      <div class="card menu-card h-100">
-        <img src="img/sea_urchin_toast_blossom.jpg" class="card-img-top" alt="ウニトーストの花咲き盛り" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Sea Urchin Toast Blossom</h5>
-          <p class="jp-title">雲丹のトースト・花仕立て</p>
-          <p class="card-text">見た目も美しい、濃厚な海の香り</p>
-          <p class="fw-bold">¥1,980</p>
+      <!-- Swiper構造化済み：Lunch -->
+<div class="tab-pane fade show active" id="lunch" role="tabpanel">
+  <div class="swiper responsive-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card menu-card">
+          <img src="img/sea_urchin_toast_blossom.jpg" class="card-img-top" alt="雲丹のトースト・花仕立て">
+          <div class="card-body">
+            <h5 class="card-title">Sea Urchin Toast Blossom</h5>
+            <p class="jp-title">雲丹のトースト・花仕立て</p>
+            <p class="card-text">見た目も美しい、濃厚な海の香り</p>
+            <p class="fw-bold">¥1,900</p>
+          </div>
+        </div>
+      </div>
+      <!-- ここに他の lunch メニューを追加 -->
+        <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="card menu-card h-100">
+          <img src="img/iwashi-pasta.jpg" class="card-img-top" alt="イワシのパスタ" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">Seasonal Sardine Pasta</h5>
+            <p class="jp-title">イワシの季節パスタ</p>
+            <p class="card-text">地元鮮魚で仕上げる香ばしい一皿</p>
+            <p class="fw-bold">¥1,880</p>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="card menu-card h-100">
+          <img src="img/shirasu_cream_mountain.jpg" class="card-img-top" alt="しらすクリームマウンテン" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title">Shirasu Cream Mountain</h5>
+            <p class="jp-title">しらすのクリームパスタ</p>
+            <p class="card-text">山のように盛られた白銀の旨み</p>
+            <p class="fw-bold">¥1,780</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-      <div class="card menu-card h-100">
-        <img src="img/iwashi-pasta.jpg" class="card-img-top" alt="イワシのパスタ" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Seasonal Sardine Pasta</h5>
-          <p class="jp-title">イワシの季節パスタ</p>
-          <p class="card-text">地元鮮魚で仕上げる香ばしい一皿</p>
-          <p class="fw-bold">¥1,880</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-      <div class="card menu-card h-100">
-        <img src="img/shirasu_cream_mountain.jpg" class="card-img-top" alt="しらすクリームマウンテン" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Shirasu Cream Mountain</h5>
-          <p class="jp-title">しらすのクリームパスタ</p>
-          <p class="card-text">山のように盛られた白銀の旨み</p>
-          <p class="fw-bold">¥1,780</p>
-        </div>
-      </div>
-    </div>
+    <div class="swiper-pagination"></div>
   </div>
 </div>
 
-      
-    <div class="tab-pane fade" id="dinner" role="tabpanel">
-  <div class="row g-4">
-    <div class="col-md-4" data-aos="zoom-in">
-      <div class="card menu-card h-100">
-        <img src="img/splende_chef_recommend_course_2025.jpg" class="card-img-top" alt="フルディナーコース" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Chef’s Signature Course</h5>
-          <p class="jp-title">シェフ渾身のコース</p>
-          <p class="card-text">美しさと旨さを兼ね備えた珠玉の皿たち</p>
-          <p class="fw-bold">¥9,800</p>
+<!-- Swiper構造化済み：Dinner -->
+<div class="tab-pane fade" id="dinner" role="tabpanel">
+  <div class="swiper responsive-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card menu-card">
+          <img src="img/splende_chef_recommend_course_2025.jpg" class="card-img-top" alt="フルディナーコース">
+          <div class="card-body">
+            <h5 class="card-title">Chef’s Signature Course</h5>
+            <p class="jp-title">シェフ溁身のコース</p>
+            <p class="card-text">美しさと旺さを兼ね備えた珍玉の皿たち</p>
+            <p class="fw-bold">¥9,800</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card menu-card position-relative">
+          <div class="ribbon">おすすめ</div>
+          <img src="img/splende_pan_fry_flame_action.jpg" class="card-img-top" alt="フランベ演出付きコース">
+          <div class="card-body">
+            <h5 class="card-title">Flambé Experience Course</h5>
+            <p class="jp-title">炎の演出付きコース</p>
+            <p class="card-text">五感で味わう劇場型イタリアン</p>
+            <p class="fw-bold">¥7,800</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card menu-card">
+          <img src="img/steak.jpg" class="card-img-top" alt="本格赤身ステーキコース">
+          <div class="card-body">
+            <h5 class="card-title">Premium Steak Course</h5>
+            <p class="jp-title">本格赤身ステーキコース</p>
+            <p class="card-text">ジューシーな旺みで満たされる特別な夜</p>
+            <p class="fw-bold">¥8,500</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-      <div class="card menu-card h-100 position-relative">
-        <div class="ribbon">おすすめ</div>
-        <img src="img/splende_pan_fry_flame_action.jpg" class="card-img-top" alt="フランベ演出付きコース" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Flambé Experience Course</h5>
-          <p class="jp-title">炎の演出付きコース</p>
-          <p class="card-text">五感で味わう劇場型イタリアン</p>
-          <p class="fw-bold">¥7,800</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-      <div class="card menu-card h-100">
-        <img src="img/steak.jpg" class="card-img-top" alt="本格赤身ステーキコース" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Premium Steak Course</h5>
-          <p class="jp-title">本格赤身ステーキコース</p>
-          <p class="card-text">ジューシーな旨みで満たされる特別な夜</p>
-          <p class="fw-bold">¥8,500</p>
-        </div>
-      </div>
-    </div>
+    <div class="swiper-pagination"></div>
   </div>
 </div>
-      <div class="tab-pane fade" id="drink" role="tabpanel">
-  <div class="row g-4">
-    <div class="col-md-4" data-aos="zoom-in">
-      <div class="card menu-card h-100">
-        <img src="img/wineseller.jpg" class="card-img-top" alt="ワインセラー内観" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Sommelier's Choice</h5>
-          <p class="jp-title">ソムリエの厳選</p>
-          <p class="card-text">その夜の料理に合う1本を、1000本の中からご提案。</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-      <div class="card menu-card h-100">
-        <img src="img/splende_bottles_closeup_winewall.jpg" class="card-img-top" alt="ワインボトルの壁" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Wine Wall Library</h5>
-          <p class="jp-title">ワインの図書館</p>
-          <p class="card-text">一本一本にストーリーがある、眺めるだけで酔いそうな棚。</p>
+<!-- Swiper構造化済み：Drink -->
+<div class="tab-pane fade" id="drink" role="tabpanel">
+  <div class="swiper responsive-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="card menu-card">
+          <img src="img/wineseller.jpg" class="card-img-top" alt="ワインセラー内観">
+          <div class="card-body">
+            <h5 class="card-title">Sommelier's Choice</h5>
+            <p class="jp-title">ソムリエの厳選</p>
+            <p class="card-text">その夜の料理に合う1000本の中からご推奨。</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card menu-card">
+          <img src="img/splende_bottles_closeup_winewall.jpg" class="card-img-top" alt="ワインボトルの壁">
+          <div class="card-body">
+            <h5 class="card-title">Wine Wall Library</h5>
+            <p class="jp-title">ワインの図書館</p>
+            <p class="card-text">一本一本にストーリーがある、看るだけで酔いそうな棚。</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="card menu-card">
+          <img src="img/wine seller2.webp" class="card-img-top" alt="ソムリエセレクション">
+          <div class="card-body">
+            <h5 class="card-title">Splende Wine Moment</h5>
+            <p class="jp-title">至福の1杯</p>
+            <p class="card-text">「この店を選んでよかった」と言わせる一杯を。</p>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-      <div class="card menu-card h-100">
-        <img src="img/wine seller2.webp" class="card-img-top" alt="ソムリエセレクション" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Splende Wine Moment</h5>
-          <p class="jp-title">至福の1杯</p>
-          <p class="card-text">「この店を選んでよかった」と言わせる一杯を。</p>
-        </div>
-      </div>
-    </div>
+    <div class="swiper-pagination"></div>
   </div>
 </div>
+
 
    
    <div class="menu-cta text-center mt-5">
-  <a href="/lp/index.html" class="cta-button-gold">お店について</a>
+  <a href="lp.html" class="cta-button-gold">お店について</a>
 </div>
     
 
@@ -302,10 +312,34 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: { el: '.swiper-pagination' },
-  });
+  
+let swiper;
+
+function initSwiper() {
+  const target = document.querySelector('.responsive-swiper');
+
+  if (window.innerWidth < 768) {
+    if (!swiper && target) {
+      swiper = new Swiper(target, {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+      });
+    }
+  } else {
+    if (swiper && typeof swiper.destroy === 'function') {
+      swiper.destroy(true, true);
+      swiper = null;
+    }
+  }
+}
+
+window.addEventListener("load", initSwiper);
+window.addEventListener("resize", () => {
+  clearTimeout(window._resizeTimer);
+  window._resizeTimer = setTimeout(initSwiper, 200);
+});
+
+
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -317,7 +351,7 @@
   new bootstrap.ScrollSpy(document.body, { target: '#navbar', offset: 80 });
 </script>
 <div class="sticky-cta">
-  <a href="/lp/index.html" class="cta-button">
+  <a href="lp.html" class="cta-button">
     <div class="cta-icon"><i class="fas fa-utensils"></i></div>
     <div class="cta-text">料理をもっと知る</div>
   </a>

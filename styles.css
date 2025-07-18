@@ -1,0 +1,161 @@
+/* === General Reset & Font === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  background-color: #f9f7f4;
+  color: #1e1e1e;
+  line-height: 1.6;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5em;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #c5a100;
+  margin: 0.5em auto 0;
+}
+
+p.caption {
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img.full {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 2em;
+}
+
+/* === Section Styling === */
+.hero, .final {
+  background: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5em;
+}
+
+.hero p,
+.final p {
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
+.essence, .space, .menu, .wine, .scene {
+  background: #fff;
+  padding: 100px 20px;
+}
+
+.menu img, .wine img, .essence img, .space img, .scene img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.menu-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item .hover-text {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.menu-item:hover .hover-text {
+  display: block;
+}
+
+/* === CTA Button === */
+.cta-section {
+  background: #f3f0e8;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-section .btn {
+  background: linear-gradient(145deg, #c5a100, #d4af37);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-section .btn:hover {
+  background: linear-gradient(145deg, #d4af37, #c5a100);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* === Footer Section === */
+.final p {
+  margin-top: 1em;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .cta-section .btn {
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}
+
+/* === Zen Flow === */
+.zen-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: zenFadeIn 1.6s ease-out forwards;
+}
+
+@keyframes zenFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

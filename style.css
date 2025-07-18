@@ -253,6 +253,25 @@ h1, .display-4 {
   margin-top: 0.5rem;
 }
 
+@media (min-width: 768px) {
+  .responsive-swiper .swiper-wrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .responsive-swiper .swiper-slide {
+    flex: 1 0 calc(33.333% - 16px);
+    max-width: calc(33.333% - 16px);
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+
+
 .cta-button-gold {
   display: inline-block;
   margin-top: 2.5rem; /* ← ここで上の余白調整 */
@@ -276,7 +295,13 @@ h1, .display-4 {
   text-decoration: none; /* 念のためホバー時も明示的に消す */
 }
 
+.menu-swiper .swiper-wrapper {
+  display: flex; /* 念のため強制 */
+}
 
+.menu-swiper .swiper-slide {
+  width: auto; /* または 100%、あなたのスライド設計による */
+}
    #insta-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -410,7 +435,7 @@ h1, .display-4 {
 
 .sticky-cta {
   position: fixed;
-  bottom: 60px;
+  bottom: 30px;
   right: 20px;
   z-index: 999;
   text-align: center;
