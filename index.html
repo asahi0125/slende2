@@ -313,31 +313,35 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
   
-let swiper;
+function initAllSwipers() {
+  document.querySelectorAll('.responsive-swiper').forEach((target, i) => {
+    const existing = target.swiper;
 
-function initSwiper() {
-  const target = document.querySelector('.responsive-swiper');
-
-  if (window.innerWidth < 768) {
-    if (!swiper && target) {
-      swiper = new Swiper(target, {
-        slidesPerView: 1.2,
-        spaceBetween: 16,
-      });
+    if (window.innerWidth < 768) {
+      if (!existing) {
+        new Swiper(target, {
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+          pagination: {
+            el: target.querySelector('.swiper-pagination'),
+            clickable: true
+          }
+        });
+      }
+    } else {
+      if (existing && typeof existing.destroy === 'function') {
+        existing.destroy(true, true);
+      }
     }
-  } else {
-    if (swiper && typeof swiper.destroy === 'function') {
-      swiper.destroy(true, true);
-      swiper = null;
-    }
-  }
+  });
 }
 
-window.addEventListener("load", initSwiper);
+window.addEventListener("load", initAllSwipers);
 window.addEventListener("resize", () => {
   clearTimeout(window._resizeTimer);
-  window._resizeTimer = setTimeout(initSwiper, 200);
+  window._resizeTimer = setTimeout(initAllSwipers, 200);
 });
+
 
 
 </script>
