@@ -124,7 +124,7 @@
           </div>
         </div>
       </div>
-      <!-- ここに他の lunch メニューを追加 -->
+   
         <!-- Slide 2 -->
       <div class="swiper-slide">
         <div class="card menu-card h-100">
@@ -190,6 +190,13 @@
             <p class="card-text">ジューシーな旺みで満たされる特別な夜</p>
             <p class="fw-bold">¥8,500</p>
           </div>
+        </div>
+      </div>
+        <div class="swiper-slide cta-slide d-md-none d-flex align-items-center justify-content-center text-center" style="background:#fefaf3;">
+        <div class="p-4">
+          <h5 class="mb-3 fw-bold">気になる料理は見つかりましたか？</h5>
+          <p class="mb-4">コースの詳細や予約は下のボタンから</p>
+          <a href="lp.html" class="btn btn-lg btn-outline-dark px-4">料理をもっと見る</a>
         </div>
       </div>
     </div>
@@ -341,10 +348,19 @@ window.addEventListener("resize", () => {
   clearTimeout(window._resizeTimer);
   window._resizeTimer = setTimeout(initAllSwipers, 200);
 });
-
-
+</script>
+<script>
+ window.addEventListener("load", () => {
+  setTimeout(() => {
+    const cta = document.querySelector(".sticky-cta");
+    if (cta) {
+      cta.style.display = "block";
+    }
+  }, 10000); // 10秒後
+});
 
 </script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -354,7 +370,8 @@ window.addEventListener("resize", () => {
   });
   new bootstrap.ScrollSpy(document.body, { target: '#navbar', offset: 80 });
 </script>
-<div class="sticky-cta">
+<div class="sticky-cta" id="stickyCta" style="display: none;">
+  <button class="close-btn" id="closeCta">×</button>
   <a href="lp.html" class="cta-button">
     <div class="cta-icon"><i class="fas fa-utensils"></i></div>
     <div class="cta-text">料理をもっと知る</div>

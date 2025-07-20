@@ -49,22 +49,146 @@ img.full {
 }
 
 /* === Section Styling === */
-.hero, .final {
-  background: #121212;
-  color: #fff;
+/* === Hero Section === */
+.hero-section {
+  background-image: url('img/04_tagliatelle_ragu_closeup_1600w.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  color: white;
   text-align: center;
-  padding: 120px 20px;
+  z-index: 2;
 }
 
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5em;
+.hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.4;
+  font-weight: 700;
+  font-family: 'Noto Serif JP', serif;
 }
 
-.hero p,
-.final p {
-  font-size: 1.05rem;
-  color: #ddd;
+.hero-content p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+/* === Hero Button === */
+.hero-section .btn-hero {
+  display: inline-block;
+  background: linear-gradient(145deg, #c5a100, #d4af37);
+  color: white;
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border-radius: 999px;
+  margin-top: 2rem;
+  transition: 0.3s ease;
+  text-decoration: none;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-section .btn-hero:hover {
+  background: linear-gradient(145deg, #d4af37, #c5a100);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+.hozumi {
+  background-image: url("img/splende_chef_kitchen_scene.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  margin-top: -5px;
+  max-width: 100%;
+  padding: 6rem 5%;
+  display: flex;
+  gap: 3rem;
+}
+
+.hozumi::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* .hozumi-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(0.55);
+  z-index: 1;
+} */
+
+.hozumi-text {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hozumi-caption {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  font-family: 'Noto Serif JP', serif;
+  margin-bottom: 1rem;
+}
+
+.hozumi-sub {
+  font-size: 1rem;
+  opacity: 0.85;
+  font-style: italic;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.hozumi-inner {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .essence, .space, .menu, .wine, .scene {

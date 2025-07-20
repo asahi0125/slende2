@@ -1,79 +1,127 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Osteria SPLENDE</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ LP専用タイトル：悩み解決型に -->
+  <title>コース料理で選ばれる松山のイタリアン｜Osteria SPLENDE 公式予約LP</title>
+
+  <!-- ✅ 説明文：予約を意識して強め -->
+  <meta name="description" content="松山市・三番町。30皿以上の料理と穂積シェフの火入れで魅せる、語らないイタリアン。公式予約はこちらから。静かな空間と五感で味わうコースを。">
+
+  <!-- ✅ LP用のキーワード：検索意図と量を意識 -->
+  <meta name="keywords" content="松山, イタリアン, コース料理, ディナー, Osteria SPLENDE, 予約, 穂積, ワイン, ランチ, 記念日, おしゃれレストラン, 松山市ディナー, 愛媛グルメ">
+
+  <!-- ✅ OGP設定：SNSシェア対策 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="松山・三番町｜コースで選ぶ大人のイタリアン Osteria SPLENDE" />
+  <meta property="og:description" content="火入れ、素材、空間で語る。予約したくなる料理体験を。" />
+  <meta property="og:url" content="https://osteria-splende.jp/lp" />
+  <meta property="og:image" content="https://osteria-splende.jp/img/ogp-image.jpg" />
+  <meta property="og:site_name" content="Osteria SPLENDE" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ✅ Twitterカード -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="松山・三番町のイタリアン｜Osteria SPLENDE LP" />
+  <meta name="twitter:description" content="語らず、気配で魅せる。穂積シェフの火入れで魅せる静かなコース料理。" />
+  <meta name="twitter:image" content="https://osteria-splende.jp/img/ogp-image.jpg" />
+
+  <!-- ✅ Faviconとか（必要なら） -->
+  <link rel="icon" href="/img/logo.webp/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ✅ ページ読み込み高速化系（あとで調整可） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
+<header class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="mb-2">ただ、美味しかった、と言ってほしい。</p>
+    <h1>火を、素材に。気配を、皿に。</h1>
+    <p>一口で、記憶が変わる。Osteria SPLENDE。</p> 
+    <a href="#menu" class="btn-hero">料理を見る</a>
+  </div>
+</header>
 
-  <!-- 1｜HERO：沈黙の一皿 -->
-  <section class="hero">
-    <div class="hero-image">
-      <!-- 背中／火を操る構図 -->
+<section class="hozumi">
+  <div class="hozumi-image" style="background-image: url('img/splende_chef_kitchen_scene.jpg');"></div>
+  <div class="hozumi-text">
+    <p class="hozumi-caption">背中は、語らない。火だけが語る。</p>
+    <p class="hozumi-sub">一皿ごとに、穂積の静かな意志が込められている。</p>
+  </div>
+</section>
+
+<section id="menu" class="section">
+  <div class="container">
+    <h2 class="section-title text-center">メニュー一覧</h2>
+    <div class="swiper menu-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/menu1.jpg" alt="料理1" class="img-fluid rounded">
+          <p class="caption">雲丹のトースト・花仕立て</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/menu2.jpg" alt="料理2" class="img-fluid rounded">
+          <p class="caption">しらすクリームマウンテン</p>
+        </div>
+        <!-- 追加メニューはここに挿入 -->
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="hero-copy">
-      <p>ただ、美味しかったと言ってほしい。</p>
-      <a href="#essence" class="cta-button subtle">空気に触れる</a>
+  </div>
+</section>
+
+<section id="course" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">コース料理</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6" data-aos="fade-up">
+        <h3>Chef's Signature Course</h3>
+        <p>¥9,800｜美しさと旺さを兼ね備えた珍玉の皿たち</p>
+      </div>
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <h3>炎の演出付きコース</h3>
+        <p>¥7,800｜五感で味わう劇場型イタリアン</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 2｜ESSENCE：素材の沈黙 -->
-  <section id="essence" class="essence">
-    <div class="essence-gallery">
-      <!-- 火入れや素材写真 -->
-      <p class="caption">豚バラに、火を通す前に、風を通す。</p>
-      <p class="caption">旬は、向こうから来る。</p>
-    </div>
-  </section>
+<section id="reserve" class="section text-center">
+  <div class="container">
+    <h2 class="section-title">ご予約・お問い合わせ</h2>
+    <p>席に限りがございますので、お早めにご予約ください。</p>
+    <a href="tel:08098317607" class="btn btn-gold mt-3">電話で予約する</a>
+  </div>
+</section>
 
-  <!-- 3｜SPACE：場所は語らない -->
-  <section class="space">
-    <div class="space-photo">
-      <p class="caption">この空間を、場所で説明しないでほしい。</p>
-    </div>
-  </section>
+<footer class="footer text-center">
+  <p>&copy; 2025 Osteria SPLENDE</p>
+</footer>
 
-  <!-- 4｜MENU：皿にだけ、名がある -->
-  <section class="menu">
-    <div class="menu-grid">
-      <figure class="dish">
-        <img src="#" alt="皿">
-        <figcaption>グリルした何か</figcaption>
-        <span class="hover-poem">やりすぎない一皿</span>
-      </figure>
-      <!-- more dishes -->
-    </div>
-  </section>
-
-  <!-- 5｜WINE：棚に並ぶ、語らない記憶 -->
-  <section class="wine">
-    <div class="wine-photo">
-      <p class="caption">この店で、最も饒舌な壁。</p>
-    </div>
-  </section>
-
-  <!-- 6｜SCENE：“なぜか話したくなる”空間 -->
-  <section class="scene">
-    <div class="scene-cut">
-      <!-- 人の気配ある写真 -->
-    </div>
-  </section>
-
-  <!-- 7｜CTA：語らず、触れてもらう -->
-  <section class="cta">
-    <a href="/reserve" class="cta-button">席を取る</a>
-    <p class="caption">風の中に、ひと皿。</p>
-  </section>
-
-  <!-- 8｜FINAL：穂積の影 -->
-  <section class="final">
-    <div class="final-photo">
-      <p class="caption">週に一度、店主の火入れが始まる。</p>
-    </div>
-  </section>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  new Swiper('.menu-swiper', {
+    slidesPerView: 1.2,
+    spaceBetween: 16,
+    pagination: { el: '.swiper-pagination', clickable: true },
+  });
+</script>
 </body>
 </html>
