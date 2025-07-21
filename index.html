@@ -350,15 +350,22 @@ window.addEventListener("resize", () => {
 });
 </script>
 <script>
- window.addEventListener("load", () => {
-  setTimeout(() => {
-    const cta = document.querySelector(".sticky-cta");
-    if (cta) {
-      cta.style.display = "block";
-    }
-  }, 10000); // 10秒後
-});
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      const cta = document.getElementById("stickyCta");
+      if (cta) {
+        cta.classList.add("show");
+        cta.style.display = "flex";
+      }
+    }, 10000); // 10秒後に表示
 
+    document.getElementById("closeCta").addEventListener("click", function () {
+      const cta = document.getElementById("stickyCta");
+      if (cta) {
+        cta.style.display = "none";
+      }
+    });
+  });
 </script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
