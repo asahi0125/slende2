@@ -142,22 +142,49 @@ section {
 
 
 /* === Menu Swiper Section === */
-.menu {
+.menu-section {
   padding: 60px 20px;
   background-color: #f9f7f4;
 }
 
-.menu .swiper-slide {
+.menu-section .swiper-slide {
   text-align: center;
   padding: 20px 12px;
 }
 
-.menu .caption {
+.menu-section .caption {
   margin-top: 0.8em;
   font-size: 0.95rem;
   color: #555;
 }
+.menu .swiper-slide {
+  display: flex;
+  height: 100%;
+  padding: 20px 12px;
+}
 
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.menu-card .card-img-top {
+  object-fit: cover;
+  height: 200px; /* 適当に調整しろ、スマホなら160pxでもOK */
+  width: 100%;
+}
+
+.menu-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
 .menu-card,
 .course-card {
   max-width: 600px;
@@ -170,6 +197,12 @@ section {
   height: auto;
   border-radius: 0.5rem;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .menu-card .card-img-top {
+    height: 160px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -358,7 +391,31 @@ a.menu-card:hover {
     padding: 0.75rem;
   }
 }
+/* === ドリンクアコーディオン=== */
+#drink .accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
+.accordion-button {
+  padding: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #f9f7f4;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #ece9e3;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  background-color: #fffdf9;
+  border-left: 4px solid #e6d6b1;
+}
 /* === Course Section === */
 .section {
   padding: 60px 20px;

@@ -60,13 +60,12 @@
 </section>
 
 
-  <section id="menu" class="section">
+  <section id="menu-section" class="section">
   <div class="container">
     <h2 class="section-title text-center">人気のメニュー</h2>
 
     <!-- タブ -->
     <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
-      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">ALL</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lunch">LUNCH</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu">MENU</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#course">COURSE</button></li>
@@ -75,18 +74,386 @@
 
     <!-- コンテンツ（タブごと）-->
     <div class="tab-content" id="menuTabContent">
-      <div class="tab-pane fade show active" id="all">
-        <!-- ALLのswiperここに -->
-      </div>
       <div class="tab-pane fade" id="lunch">
         <!-- LUNCHのswiperここに -->
+          <div class="swiper lunch-swiper">
+          <div class="swiper-wrapper">
+         <div class="swiper-slide">
+          <div class="ribbon">おすすめ</div>
+          <a href="img/lunchset.jpg"
+            class="glightbox card menu-card h-100"
+            data-gallery="menu"
+            data-glightbox="title: '本日のパスタランチ（季節のパスタ）'; description: '全てのランチにスープ・サラダ・バケットが付きます。<br>※写真はホタルイカのパスタランチです<br><strong>¥1,738</strong>'">
+            
+            <img src="img/lunchset.jpg"" class="card-img-top" alt="本日のパスタランチ（季節のパスタ）" />
+            
+            <div class="card-body">
+              <h5 class="card-title">本日のパスタランチ（季節のパスタ）</h5>
+              <p class="card-text">スープ・サラダ・バケット付き。写真はホタルイカ。</p>
+              <p class="fw-bold">¥1,738</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="img/lunchcourse.jpg"
+            class="glightbox card menu-card h-100"
+            data-gallery="lunch"
+            data-glightbox="title: 'Lunchコース'; description: 'スープ・前菜盛り合わせ（約9品）・パスタ・肉料理（鶏 or 鴨）<br><br><strong>鶏：¥2,800</strong><br><strong>鴨：¥3,800</strong><br><br>前日予約で¥5,000のコース（魚料理＋牛肉料理）もございます<br><strong>¥3,080〜</strong>'">
+            
+            <img src="img/lunchcourse.jpg" class="card-img-top" alt="Lunchコース" />
+            
+            <div class="card-body">
+              <h5 class="card-title">Lunchコース</h5>
+              <p class="card-text">前菜9品・スープ・パスタ・肉料理の充実コース。前日予約で魚＋牛の特別コースも。</p>
+              <p class="fw-bold">¥3,080〜</p>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="img/Sardine Oil Pasta.jpg"
+            class="glightbox card menu-card h-100"
+            data-gallery="menu"
+            data-glightbox="title: '大羽イワシのオイルパスタ'; description: '新鮮な大羽イワシをふんだんに使用。<br>シェフ特製のブロードで丁寧に仕上げた、開店以来の看板メニュー。<br><em>使用パスタ：イタリア・モノグラーノ社 高級乾麺</em><br><strong>¥1,518</strong>'">
+            
+            <img src="img/Sardine Oil Pasta.jpg" class="card-img-top" alt="大羽イワシのオイルパスタ" />
+            
+            <div class="card-body">
+              <h5 class="card-title">大羽イワシのオイルパスタ</h5>
+              <p class="card-text">
+                看板メニューの貫禄。イワシ×ブロード×モノグラーノ＝旨みの暴力。
+              </p>
+              <p class="fw-bold">¥1,518</p>
+            </div>
+          </a>
+        </div>
+            <div class="swiper-slide">
+            <a href="img/wagyu_cutlet_double_texture.jpg"
+              class="glightbox card menu-card h-100"
+              data-gallery="menu"
+              data-glightbox="title: '媛ポークのラグーパスタ'; description: '愛媛県産の粗挽きポークをじっくり煮込んだ優しい味わいのラグー。<br>麺は、ミシュラン星付き店も愛用する「冨士麺ず工房」の生麺を使用。<br>お子様にも大好評の一皿。<br><strong>¥1,518</strong>'">
+              
+              <img src="img/wagyu_cutlet_double_texture.jpg" class="card-img-top" alt="媛ポークのラグーパスタ" />
+              
+              <div class="card-body">
+                <h5 class="card-title">媛ポークのラグーパスタ</h5>
+                <p class="card-text">
+                  愛媛ポーク×冨士麺ず工房の生麺——洗練された優しさで、大人も子供も笑顔に。
+                </p>
+                <p class="fw-bold">¥1,518</p>
+              </div>
+            </a>
+          </div>
+              <div class="swiper-slide">
+              <a href="img/scallop_lemon_cream_fettuccine.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'ホタテとレモンのクリームパスタ'; description: '冨士麺ず工房の生タリアテッレに、新鮮な帆立と大島レモンの香り。<br>生クリームと熟成パルミジャーノで仕上げた、スプレンデ自慢の一皿。<br><strong>¥1,628</strong>'">
+                <img src="img/scallop_lemon_cream_fettuccine.jpg" class="card-img-top" alt="ホタテとレモンのクリームパスタ" />
+                <div class="card-body">
+                  <h5 class="card-title">ホタテとレモンのクリームパスタ</h5>
+                  <p class="card-text">
+                    冨士麺ず工房の生タリアテッレに帆立と大島レモンの香りを添えて。<br>
+                    生クリームとパルミジャーノで仕上げた自慢の一皿。
+                  </p>
+                  <p class="fw-bold">¥1,628</p>
+                </div>
+              </a>
+            </div>
+              <div class="swiper-slide">
+              <a href="img/seafoodpasta.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: '本日のパスタ'; description: '季節の素材をシェフがセレクト。<br>その日だけの一皿をお楽しみください。<br><strong>¥1,740</strong>'">
+                <img src="img/seafoodpasta.jpg" class="card-img-top" alt="本日のパスタ" />
+                <div class="card-body">
+                  <h5 class="card-title">本日のパスタ</h5>
+                  <p class="card-text">
+                    旬の素材で仕上げる、日替わり特製パスタ。<br>
+                    何が出るかは当日のお楽しみ。
+                  </p>
+                  <p class="fw-bold">¥1,740</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+            <a href="img/bitter_beer_pairing_pasta.jpg"
+              class="glightbox card menu-card h-100"
+              data-gallery="menu"
+              data-glightbox="title: 'パスタ・コン・レ・サルテ'; description: 'トマトペーストの酸味が効いた、イタリア伝統の味わい。<br>ペローニビールとの相性も抜群。<br><strong>¥1,738</strong>'">
+              <img src="img/bitter_beer_pairing_pasta.jpg" class="card-img-top" alt="パスタ・コン・レ・サルテ" />
+              <div class="card-body">
+                <h5 class="card-title">パスタ・コン・レ・サルテ</h5>
+                <p class="card-text">
+                  トマトの酸味と香りで、南イタリアの陽気な風をそのままに。<br>
+                  ペローニ片手にぜひどうぞ。
+                </p>
+                <p class="fw-bold">¥1,738</p>
+              </div>
+            </a>
+          </div>
+            <div class="swiper-slide">
+            <a href="img/lunchcourse.jpg"
+              class="glightbox card menu-card h-100"
+              data-gallery="menu"
+              data-glightbox="title: 'ミニコース'; description: '季節のスープ、前菜盛り合わせ、季節のパスタ、バケット、メイン、ドルチェ、カフェのフルセット。<br>※鴨肉をメインにした場合は＋¥1,000。<br>※魚・和牛コースは前日までの予約制（¥5,000）<br><strong>¥3,168</strong>'">
+              <img src="img/lunchcourse.jpg" class="card-img-top" alt="ミニコース" />
+              <div class="card-body">
+                <h5 class="card-title">ミニコース</h5>
+                <p class="card-text">
+                  スープからカフェまで、しっかり満たされる贅沢セット。<br>
+                  鴨はちょい増し、お魚と和牛は前日からの勝負。
+                </p>
+                <p class="fw-bold">¥3,168</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="img/wagyu_redwine_miso_braise.jpg"
+              class="glightbox card menu-card h-100"
+              data-gallery="menu"
+              data-glightbox="title: '煮込みハンバーグ'; description: '和牛の手捏ねハンバーグに大洲の巽味噌を隠し味としてプラス。<br>濃厚な旨みで大人も子供も笑顔に。<br><strong>¥1,738</strong>'">
+              <img src="img/wagyu_redwine_miso_braise.jpg" class="card-img-top" alt="煮込みハンバーグ" />
+              <div class="card-body">
+                <h5 class="card-title">煮込みハンバーグ</h5>
+                <p class="card-text">
+                  和牛×巽味噌のしっとり煮込み仕立て。お子様人気が高すぎて奪い合い必至。
+                </p>
+                <p class="fw-bold">¥1,738</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="img/beef_mushroom_foil_bake_plate.jpg"
+              class="glightbox card menu-card h-100"
+              data-gallery="menu"
+              data-glightbox="title: '鉄板デミグラスソースハンバーグ'; description: '学生時代の思い出を詰めた復刻版ハンバーグ。<br>自家製デミグラスをホイル包みにして、じっくり鉄板でアツアツに。<br><strong>¥1,738</strong>'">
+              <img src="img/beef_mushroom_foil_bake_plate.jpg" class="card-img-top" alt="鉄板デミグラスソースハンバーグ" />
+              <div class="card-body">
+                <h5 class="card-title">鉄板デミグラスソースハンバーグ</h5>
+                <p class="card-text">
+                  オーナーの学生時代が蘇るホイル包み。鉄板ジュージューのまま届け。
+                </p>
+                <p class="fw-bold">¥1,738</p>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="img/dessert_02 (1).jpg"
+              class="glightbox card menu-card h-100"
+              data-gallery="menu"
+              data-glightbox="title: '自家製 ガトーショコラテリーヌ'; description: '絶妙な触感で食後の口福を演出します。<br>お店のパティシエ候補生の自信作。<br><strong>¥748</strong>'">
+              <img src="img/dessert_02 (1).jpg" class="card-img-top" alt="自家製 ガトーショコラテリーヌ" />
+              <div class="card-body">
+                <h5 class="card-title">自家製 ガトーショコラテリーヌ</h5>
+                <p class="card-text">
+                  絶妙な触感が光る、パティシエ候補生の渾身スイーツ。口福の余韻に包まれて。
+                </p>
+                <p class="fw-bold">¥748</p>
+              </div>
+            </a>
+          </div>
+         </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
-      <div class="tab-pane fade" id="menu">
+
+        <div class="tab-pane fade show active" id="menu">
         <!-- MENUのswiperここに -->
+        <div class="swiper menu-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="img/white_asparagus.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'フランス産ホワイトアスパラガス のハーモニー'; description: 'フランス産ホワイトアスパラガス、パルマ産生ハム、イタリア産パルミジャーノ、黒トリュフ、低温調理卵 のハーモニー<br><strong>¥2,728</strong>'">
+                <img src="img/white_asparagus.jpg"
+                  class="card-img-top"
+                  alt="フランス産ホワイトアスパラガス のハーモニー" />
+                <div class="card-body">
+                  <h5 class="card-title">フランス産ホワイトアスパラガス のハーモニー</h5>
+                  <p class="card-text">
+                    パルマ産生ハム、黒トリュフ、パルミジャーノと合わせた春のハーモニー。
+                  </p>
+                  <p class="fw-bold">¥2,728</p>
+                </div>
+              </a>
+            </div>
+            <!-- 他のswiper-slideもここに追加 -->
+             <div class="swiper-slide">
+              <a href="img/Firefly_squid_pasta.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'ホタルイカのパスタ（キタッラ）'; description: 'ホタルイカ、フルーツパプリカ、スナップエンドウのハーモニーにカラスミをプラス<br><strong>¥1,738</strong>'">
+                <img src="img/Firefly_squid_pasta.jpg" class="card-img-top" alt="ホタルイカのパスタ" />
+                <div class="card-body">
+                  <h5 class="card-title">ホタルイカのパスタ（生麺・キタッラ）</h5>
+                  <p class="card-text">ホタルイカ、パプリカ、スナップのハーモニーにカラスミをプラス</p>
+                  <p class="fw-bold">¥1,738</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/scallop_lemon_cream_fettuccine.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'ホタテとレモンのクリームパスタ'; description: 'スプレンドの一番人気パスタ<br>ランチ時間帯の提供もございます<br><strong>¥1,848</strong>'">
+                <img src="img/scallop_lemon_cream_fettuccine.jpg" class="card-img-top" alt="ホタテとレモンのクリームパスタ" />
+                <div class="card-body">
+                  <h5 class="card-title">ホタテとレモンのクリームパスタ</h5>
+                  <p class="card-text">スプレンドの一番人気パスタ。ランチでも提供中。</p>
+                  <p class="fw-bold">¥1,848</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/splende_tempura_crescent_style.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: '鮮魚のフリット'; description: '季節の鮮魚をイタリアの甘みのある小麦粉で仕上げます<br>※写真は鱧のフリットです<br><strong>¥1,980</strong>'">
+                <img src="img/splende_tempura_crescent_style.jpg" class="card-img-top" alt="鮮魚のフリット" />
+                <div class="card-body">
+                  <h5 class="card-title">鮮魚のフリット</h5>
+                  <p class="card-text">季節の鮮魚をイタリア産小麦粉でサクッと。写真は鱧。</p>
+                  <p class="fw-bold">¥1,980</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/06_chicken_crispy_skin_closeup_1600.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: '季節の魚介のパスタ'; description: '築地を中心に日本中の市場から届く魚介を、季節に合った最高の調理法でご提供。<br>スプレンデ自慢の一皿です。'">
+                <img src="img/06_chicken_crispy_skin_closeup_1600.jpg" class="card-img-top" alt="季節の魚介のパスタ" />
+                <div class="card-body">
+                  <h5 class="card-title">季節の魚介のパスタ</h5>
+                  <p class="card-text">
+                    築地を中心に仕入れた魚介を、季節に応じて最適な調理法で仕上げます。
+                  </p>
+                  <!-- 値段なし -->
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/Insalata_Splendido.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'インサラータ ディ スプレンド'; description: 'マイクロハーブのサラダ。シンプルにEXVオリーブオイル（ピショリーヌ）とクリスマス島の塩で味付け。<br>季節のフルーツと共に。<br><strong>¥1,800</strong>'">
+                <img src="img/Insalata_Splendido.jpg" class="card-img-top" alt="インサラータ ディ スプレンド" />
+                <div class="card-body">
+                  <h5 class="card-title">インサラータ ディ スプレンド</h5>
+                  <p class="card-text">
+                    マイクロハーブをEXVオイルと天然塩でシンプルに。季節の果物と一緒にどうぞ。
+                  </p>
+                  <p class="fw-bold">¥1,800</p>
+                </div>
+              </a>
+            </div>
+              <div class="swiper-slide">
+              <a href="img/Prosciutto_and_Grissini.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'プロシュートとグリッシーニ'; description: '限界まで薄くスライスされたパルマ産生ハムとグリッシーニ。<br><strong>¥1,800</strong>'">
+                <img src="img/Prosciutto_and_Grissini.jpg" class="card-img-top" alt="プロシュートとグリッシーニ" />
+                <div class="card-body">
+                  <h5 class="card-title">プロシュートとグリッシーニ</h5>
+                  <p class="card-text">
+                    限界まで薄く切った生ハム。誇り高きイタリアの前菜スナイパー。
+                  </p>
+                  <p class="fw-bold">¥1,800</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/Campania_buffalo_bocconcini_caprese.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'カンパーニャ産水牛ボッコンチーニ カプレーゼ'; description: 'イタリアから空輸されたフレッシュボッコンチーニを使用。<br>ミルク感と塩味の絶妙なバランス。<br><strong>¥1,600</strong>'">
+                <img src="img/Campania_buffalo_bocconcini_caprese.jpg" class="card-img-top" alt="ボッコンチーニ カプレーゼ" />
+                <div class="card-body">
+                  <h5 class="card-title">カンパーニャ産水牛ボッコンチーニ カプレーゼ</h5>
+                  <p class="card-text">
+                    フレッシュチーズの甘みと酸味が広がる、本気のカプレーゼ。
+                  </p>
+                  <p class="fw-bold">¥1,600</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/beef_ragu_spaghetti_homeplate.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: '牛肉のラグー'; description: '骨付き牛肉の旨みを丁寧にラグーに。<br>富士麺ず工房の生パスタで仕上げた贅沢な一皿。<br><strong>¥1,980</strong>'">
+                <img src="img/beef_ragu_spaghetti_homeplate.jpg" class="card-img-top" alt="牛肉のラグー" />
+                <div class="card-body">
+                  <h5 class="card-title">牛肉のラグー</h5>
+                  <p class="card-text">骨周りの旨みを凝縮。富士麺ず工房の生麺が絡む渾身の一品。</p>
+                  <p class="fw-bold">¥1,980</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/greenpasta.jpg"
+                class="glightbox card menu-card h-100"
+                data-gallery="menu"
+                data-glightbox="title: 'ジェノベーゼ'; description: '状態の良い国産生バジルが入手できた時のみ提供。<br>口に広がるフレッシュな香りと、シェフ特製のブロードが味の決め手。<br><em>※限定メニュー／価格はスタッフまで</em>'">
+                <img src="img/greenpasta.jpg" class="card-img-top" alt="ジェノベーゼ" />
+                <div class="card-body">
+                  <h5 class="card-title">ジェノベーゼ</h5>
+                  <p class="card-text">良質な生バジルと隠し味のブロード。香りで勝負する一皿。</p>
+                  <p class="fw-bold text-muted">価格はスタッフまで</p>
+                </div>
+              </a>
+            </div>
+                <div class="swiper-slide">
+                <a href="img/wagyu_cutlet_double_texture.jpg"
+                  class="glightbox card menu-card h-100"
+                  data-gallery="menu"
+                  data-glightbox="title: '自家製パッパルデッレ 黒毛和牛のラグー'; description: '自家製の平打ちパスタと黒毛和牛の煮込みソース。<br>48ヶ月熟成のパルミジャーノ・レッジャーノをたっぷりと。<br><strong>¥1,800</strong>'">
+                  <img src="img/wagyu_cutlet_double_texture.jpg" class="card-img-top" alt="自家製パッパルデッレ 黒毛和牛のラグー" />
+                  <div class="card-body">
+                    <h5 class="card-title">自家製パッパルデッレ 黒毛和牛のラグー</h5>
+                    <p class="card-text">濃厚ラグーと熟成チーズで、平打ちパスタが本気出す。</p>
+                    <p class="fw-bold">¥1,800</p>
+                  </div>
+                </a>
+              </div>
+                <div class="swiper-slide">
+                <a href="img/Kihokucho_Aged_Male_Charbroiled.jpg"
+                  class="glightbox card menu-card h-100"
+                  data-gallery="menu"
+                  data-glightbox="title: '鬼北町熟成雄 骨付きモモ肉 炭火焼き'; description: '骨付きの熟成雄鶏を炭火でじっくり焼き上げた逸品。<br>手掴みで豪快にお召し上がりください。<br><strong>¥2,800</strong>'">
+                  <img src="img/Kihokucho_Aged_Male_Charbroiled.jpg" class="card-img-top" alt="鬼北町熟成雄 骨付きモモ肉 炭火焼き" />
+                  <div class="card-body">
+                    <h5 class="card-title">鬼北町熟成雄 骨付きモモ肉 炭火焼き</h5>
+                    <p class="card-text">炭火で豪快に。手でいけ、手で。</p>
+                    <p class="fw-bold">¥2,800</p>
+                  </div>
+                </a>
+              </div>
+                <div class="swiper-slide">
+                <a href="img/grilled_pork_beer_pairing_plate.jpg"
+                  class="glightbox card menu-card h-100"
+                  data-gallery="menu"
+                  data-glightbox="title: '豚肩ロース ポルケッタ 炭火焼き'; description: 'フェンネルやローズマリーなどのハーブを肩ロースに詰め、炭火で香ばしく焼き上げたイタリア伝統の焼き豚。<br><strong>¥2,500</strong>'">
+                  <img src="img/grilled_pork_beer_pairing_plate.jpg" class="card-img-top" alt="豚肩ロース ポルケッタ 炭火焼き" />
+                  <div class="card-body">
+                    <h5 class="card-title">豚肩ロース ポルケッタ 炭火焼き</h5>
+                    <p class="card-text">香草と豚の黄金合体。イタリア伝統の炭火グリル。</p>
+                    <p class="fw-bold">¥2,500</p>
+                  </div>
+                </a>
+              </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
-      <div class="tab-pane fade" id="course">
+
+<div class="tab-pane fade" id="course">
+  <!-- COURSEのswiperはこっちに -->
+
+
         <!-- COURSEのswiperここに -->
-         <div class="swiper menu-swiper">
+         <div class="swiper course-swiper">
           <div class="swiper-wrapper">
          <div class="swiper-slide">
          <a href="img/splende_chef_recommend_course_2025.jpg"
@@ -164,13 +531,97 @@
   </a>
 </div>
 <div class="swiper-pagination"></div>
-
+</div>
         </div>
       </div>
     </div>
       </div>
       <div class="tab-pane fade" id="drink">
         <!-- DRINKのswiperここに（画像あるやつだけ） -->
+         <div class="accordion" id="accordionDrinks">
+      <!-- ワイン -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingWine">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWine" aria-expanded="true" aria-controls="collapseWine">
+            ワイン & シャンパン
+          </button>
+        </h2>
+        <div id="collapseWine" class="accordion-collapse collapse show" aria-labelledby="headingWine" data-bs-parent="#accordionDrinks">
+          <div class="accordion-body">
+            <p><strong>グラスワイン</strong><br>赤／白 各 880円〜</p>
+            <p><strong>グラスシャンパン</strong><br>1,100円〜</p>
+            <p><strong>ボトルワイン</strong><br>仕入れ価格＋3,000円〜（5,000円〜）</p>
+            <p class="text-muted small">※ メニュー外も多数あります。スタッフまで</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ビール・ハイボール -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingBeer">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeer" aria-expanded="false" aria-controls="collapseBeer">
+            ビール・ハイボール
+          </button>
+        </h2>
+        <div id="collapseBeer" class="accordion-collapse collapse" aria-labelledby="headingBeer" data-bs-parent="#accordionDrinks">
+          <div class="accordion-body">
+            <p><strong>生ビール・モレッティ</strong><br>各 730円〜</p>
+            <p><strong>ランチ生ビール</strong> 550円<br><strong>ミニ生</strong> 418円</p>
+            <p><strong>ハイボール（角・白州）</strong> 各 880円〜<br>ランチ角ハイ 550円</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- カクテル・ノンアル -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingCocktail">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCocktail" aria-expanded="false" aria-controls="collapseCocktail">
+            カクテル & ノンアルコール
+          </button>
+        </h2>
+        <div id="collapseCocktail" class="accordion-collapse collapse" aria-labelledby="headingCocktail" data-bs-parent="#accordionDrinks">
+          <div class="accordion-body">
+            <p><strong>ジントニック</strong> 780円</p>
+            <p><strong>ノンアルコールビール</strong> 580円</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ソフトドリンク -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSoft">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSoft" aria-expanded="false" aria-controls="collapseSoft">
+            ソフトドリンク & カフェ
+          </button>
+        </h2>
+        <div id="collapseSoft" class="accordion-collapse collapse" aria-labelledby="headingSoft" data-bs-parent="#accordionDrinks">
+          <div class="accordion-body">
+            <p><strong>クラフトコーラ・ブラッドオレンジ</strong> 各 400円〜</p>
+            <p><strong>グレープフルーツ／ペリエ</strong> 各 400円</p>
+            <p><strong>サンペレグリノ／アクアパンナ</strong> 各 400円〜</p>
+            <p><strong>コーヒー／エスプレッソ／カフェラテ</strong> 各 400円</p>
+            <p>ランチ：コーヒー 330円、エスプレッソ／紅茶／カフェラテ 〜</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 飲み放題 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNomihodai">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNomihodai" aria-expanded="false" aria-controls="collapseNomihodai">
+            飲み放題プラン
+          </button>
+        </h2>
+        <div id="collapseNomihodai" class="accordion-collapse collapse" aria-labelledby="headingNomihodai" data-bs-parent="#accordionDrinks">
+          <div class="accordion-body">
+            <p><strong>料金</strong>：2,200円／120分制（90分LO）</p>
+            <p><strong>条件</strong>：コース＋4名様以上より</p>
+            <p><strong>内容</strong>：生ビール、グラスワイン、シャンパン、ハイボール、カクテル各種、ソフトドリンク、ノンアル、焼酎など</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
       </div>
     </div>
   </div>
@@ -215,44 +666,79 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     
-      let swiperInstance = null;
+ let swiperInstances = {};
+const initializedTabs = {};
 
-  function initSwiper() {
-    const isMobile = window.innerWidth < 768;
+function initSwiper(tabId, swiperClass) {
+  const isMobile = window.innerWidth < 768;
+  const container = document.querySelector(`#${tabId} .${swiperClass}`);
+  if (!container) return;
 
-    if (swiperInstance) swiperInstance.destroy(true, true);
-
-    swiperInstance = new Swiper(".menu-swiper", {
-      slidesPerView: isMobile ? 1.2 : 3,
-      spaceBetween: 16,
-      loop: !isMobile,
-      autoplay: !isMobile ? { delay: 3000 } : false,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+  // すでに初期化済みなら削除してから
+  if (swiperInstances[tabId]) {
+    swiperInstances[tabId].destroy(true, true);
   }
 
-  window.addEventListener("DOMContentLoaded", () => {
-    initSwiper();
-    window.addEventListener("resize", () => {
-      initSwiper();
+  const slides = container.querySelectorAll('.swiper-slide');
+  const slideCount = slides.length;
+  const shouldLoop = !isMobile && slideCount > 3;
+
+  swiperInstances[tabId] = new Swiper(container, {
+    slidesPerView: isMobile ? 1.2 : 3,
+    spaceBetween: 16,
+    loop: shouldLoop,
+    autoplay: shouldLoop ? { delay: 3000 } : false,
+    pagination: {
+      el: `#${tabId} .swiper-pagination`,
+      clickable: true,
+    },
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const activeTab = document.querySelector(".tab-pane.show.active");
+  const activeId = activeTab?.id;
+  if (activeId) {
+    initSwiper(activeId, `${activeId}-swiper`);
+    initializedTabs[activeId] = true;
+  }
+
+  // タブ切り替えでSwiper初期化
+  document.querySelectorAll('[data-bs-toggle="tab"]').forEach(button => {
+    button.addEventListener("shown.bs.tab", e => {
+      const targetId = e.target.getAttribute("data-bs-target").replace("#", "");
+      if (!initializedTabs[targetId]) {
+        initSwiper(targetId, `${targetId}-swiper`);
+        initializedTabs[targetId] = true;
+      }
     });
   });
 
-  const lightbox = GLightbox({
-    selector: ".glightbox",
-    touchNavigation: true,
-    loop: true,
-    closeOnOutsideClick: true,
-    onOpen: () => {
-      swiperInstance?.autoplay?.stop();
-    },
-    onClose: () => {
-      if (window.innerWidth >= 768) swiperInstance?.autoplay?.start();
-    },
+  // リサイズ時に再初期化（全Swiper）
+  window.addEventListener("resize", () => {
+    Object.keys(initializedTabs).forEach(tabId => {
+      initSwiper(tabId, `${tabId}-swiper`);
+    });
   });
+});
+
+// GLightboxとSwiper連携（ポップアップでautoplay止める）
+const lightbox = GLightbox({
+  selector: ".glightbox",
+  touchNavigation: true,
+  loop: true,
+  closeOnOutsideClick: true,
+  onOpen: () => {
+    Object.values(swiperInstances).forEach(swiper => swiper?.autoplay?.stop());
+  },
+  onClose: () => {
+    Object.values(swiperInstances).forEach(swiper => {
+      if (window.innerWidth >= 768) swiper?.autoplay?.start();
+    });
+  },
+});
+
+
 
 </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
