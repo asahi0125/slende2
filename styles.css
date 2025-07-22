@@ -1,28 +1,40 @@
-/* === General Reset & Font === */
+/* === General Reset & Base === */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Zen Maru Gothic', sans-serif;
+  font-family: 'Noto Serif JP', serif;
   background-color: #f9f7f4;
   color: #1e1e1e;
   line-height: 1.6;
 }
 
-section {
-  padding: 80px 20px;
-  max-width: 960px;
-  margin: 0 auto;
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 1.5em;
 }
 
-h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  margin-bottom: 1.5em;
+h1, h2, h3 {
   text-align: center;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.5px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+/* === Section Title === */
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 
-h2::after {
+.section-title::after {
   content: "";
   display: block;
   width: 60px;
@@ -31,194 +43,343 @@ h2::after {
   margin: 0.5em auto 0;
 }
 
-p.caption {
-  font-size: 0.95rem;
-  font-style: italic;
-  text-align: center;
-  color: #444;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-img.full {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  margin-bottom: 2em;
-}
-
-/* === Section Styling === */
 /* === Hero Section === */
-.hero-section {
-  background-image: url('img/04_tagliatelle_ragu_closeup_1600w.jpg');
+.hero {
+  background-image: url("img/splende_wide_view_nightwalk.jpg"); /* ← 差し替え可 */
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
-  height: 100vh;
-  position: relative;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 1;
-}
-
-.hero-content {
   position: relative;
   color: white;
   text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
   z-index: 2;
+  max-width: 960px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
-.hero-content h1 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.4;
-  font-weight: 700;
-  font-family: 'Noto Serif JP', serif;
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero .lead,
+.hero .sublead {
   font-size: 1.1rem;
-  margin-top: 1rem;
-  opacity: 0.85;
+  margin: 0.5rem 0;
+  opacity: 0.9;
 }
 
-/* === Hero Button === */
-.hero-section .btn-hero {
+.btn-hero {
   display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 28px;
   background: linear-gradient(145deg, #c5a100, #d4af37);
   color: white;
-  font-size: 0.95rem;
-  padding: 12px 24px;
   border-radius: 999px;
-  margin-top: 2rem;
-  transition: 0.3s ease;
   text-decoration: none;
-  z-index: 2;
-  position: relative;
+  transition: 0.3s ease;
 }
 
-.hero-section .btn-hero:hover {
+.btn-hero:hover {
   background: linear-gradient(145deg, #d4af37, #c5a100);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* === Responsive Adjustments === */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-}
-
+/* === Chef / Message Section === */
 .hozumi {
-  background-image: url("img/splende_chef_kitchen_scene.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  width: 100%;
-  height: 80vh;
+  padding: 60px 20px;
+  background-color: #fffefc;
+}
+
+.hozumi-inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #111;
-  color: white;
-  text-align: center;
-  overflow: hidden;
-  margin-top: -5px;
-  max-width: 100%;
-  padding: 6rem 5%;
-  gap: 3rem;
+  text-align: left;
 }
 
-.hozumi::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
-  z-index: 1;
-}
-
-.hozumi-text {
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-  max-width: 100%;
-  width: 100%;
+.hozumi-photo {
+  max-width: 480px;
+  margin-bottom: 2rem;
 }
 
 .hozumi-caption {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: 700;
-  font-family: 'Noto Serif JP', serif;
+  font-size: 1.2rem;
+  font-style: italic;
   margin-bottom: 1rem;
+  color: #555;
 }
 
 .hozumi-sub {
   font-size: 1rem;
-  opacity: 0.85;
-  font-style: italic;
-  font-family: 'Noto Serif JP', serif;
+  color: #333;
+  line-height: 1.8;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hozumi-inner {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
-.hozumi-inner {
-  max-width: 800px;
+
+/* === Menu Swiper Section === */
+.menu {
+  padding: 60px 20px;
+  background-color: #f9f7f4;
+}
+
+.menu .swiper-slide {
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.menu .caption {
+  margin-top: 0.8em;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.menu-card,
+.course-card {
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.essence, .space, .menu, .wine, .scene {
-  background: #fff;
-  padding: 100px 20px;
-}
-
-.menu img, .wine img, .essence img, .space img, .scene img {
+.menu-card img,
+.course-card img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1.5em;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
 
-.menu-item {
-  position: relative;
+@media (min-width: 992px) {
+  .course-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .course-card img {
+    max-width: 50%;
+    flex-shrink: 0;
+  }
+
+  .course-card .card-body {
+    flex: 1;
+  }
+}
+
+/* === カード全体を aタグで囲んだときの基本リセット === */
+a.menu-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
   overflow: hidden;
 }
 
-.menu-item .hover-text {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.6);
+a.menu-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* === メニュー画像 === */
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* === カード内部のボディ === */
+.card-body {
+  padding: 1rem;
+  background-color: #fffdfb;
+}
+
+/* === タイトルなどの装飾 === */
+.card-title {
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.25rem;
+}
+
+.jp-title {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.fw-bold {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #c5a100;
+  margin-top: 0.5rem;
+}
+
+.ribbon {
+      position: absolute;
+      top: 10px; left: -10px;
+      background: crimson;
+      color: white;
+      padding: 5px 15px;
+      transform: rotate(-45deg);
+      font-size: 0.8rem;
+      font-weight: bold;
+      z-index: 999;
+    }
+
+/* === GLightbox 拡大画像のサイズ制限 === */
+.glightbox-container .gslide-image img {
+  max-width: 90vw;    /* 横幅は画面の90%まで */
+  max-height: 70vh;   /* 高さは画面の70%まで */
+  object-fit: contain;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+/* GLightbox のキャプションを画像の外に出すスタイル */
+.glightbox-container .gdesc-inner {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1rem;
+  max-height: 50vh;
+  overflow-y: auto;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 auto;
   color: #fff;
-  padding: 1em;
-  text-align: center;
+  max-height: 50vh; /* ビューポートの半分くらいを限界にする */
+  box-sizing: border-box;
+}
+.glightbox-clean .gslide-title{
+  color: #fff;
 }
 
-.menu-item:hover .hover-text {
-  display: block;
+ 
+
+/* ====== デフォルト（PC用）====== */
+.glightbox-container .gdesc {
+  position: static;
+  width: 100%;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
 
-/* === CTA Button === */
-.cta-section {
-  background: #f3f0e8;
-  text-align: center;
+.glightbox-container .gdesc-inner {
+  background: #111; /* 真っ黒にしすぎない */
+  padding: 1.25rem;
+  color: #fff;
+  border-radius: 8px;
+  line-height: 1.7;
+  max-height: 40vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+/* モバイルでキャプションの位置を調整（下に固定） */
+@media (max-width: 768px) {
+  .glightbox-container .gdesc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem 1rem 1rem;
+    background: transparent;
+  }
+
+  .glightbox-container .gdesc-inner {
+    max-height: 25vh;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.75rem;
+  }
+
+}
+
+
+.swiper {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition-timing-function: ease;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 300px; /* 必要に応じて調整 */
+  margin-right: 1rem;
+}
+
+/* === スワイパーの中にいる時の調整 === */
+.swiper-slide a.menu-card {
+  height: 100%;
+}
+
+/* === レスポンシブ調整 === */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 160px;
+  }
+
+  .card-body {
+    padding: 0.75rem;
+  }
+}
+
+/* === Course Section === */
+.section {
   padding: 60px 20px;
 }
 
-.cta-section .btn {
+.bg-light {
+  background-color: #f3f0e8;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* === Reservation Section === */
+#reserve {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.btn-gold {
   background: linear-gradient(145deg, #c5a100, #d4af37);
   color: white;
   border: none;
@@ -227,71 +388,39 @@ img.full {
   border-radius: 999px;
   cursor: pointer;
   transition: 0.3s ease;
+  text-decoration: none;
 }
 
-.cta-section .btn:hover {
+.btn-gold:hover {
   background: linear-gradient(145deg, #d4af37, #c5a100);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* === Footer Section === */
-.final p {
-  margin-top: 1em;
-  font-style: italic;
-  color: #aaa;
+/* === Footer === */
+.footer {
+  padding: 40px 20px;
+  background-color: #eee;
+  color: #333;
+  font-size: 0.9rem;
 }
 
 /* === Responsive === */
-@media screen and (max-width: 600px) {
-  h2 {
-    font-size: 1.4rem;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
-    line-height: 1.4;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    margin: 0.8rem 0;
-  }
-
-  .hero-section .btn-hero {
-    font-size: 1rem;
-    padding: 14px 24px;
-  }
-
-  .hozumi {
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+  .hero {
     height: auto;
-    padding: 60px 5%;
+    background-attachment: scroll;
   }
 
-  .hozumi-caption {
-    font-size: 1.6rem;
+  .hero h1 {
+    font-size: 2.2rem;
   }
 
-  .hozumi-sub {
-    font-size: 0.95rem;
+  .btn-hero {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 
-  .cta-section .btn {
-    font-size: 0.95rem;
-    padding: 12px 20px;
-  }
-}
-
-/* === Zen Flow === */
-.zen-fade {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: zenFadeIn 1.6s ease-out forwards;
-}
-
-@keyframes zenFadeIn {
-  to {
-    opacity: 1;
-    transform: none;
+  .hozumi-inner {
+    flex-direction: column;
   }
 }

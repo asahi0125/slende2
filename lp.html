@@ -3,125 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ✅ LP専用タイトル：悩み解決型に -->
   <title>コース料理で選ばれる松山のイタリアン｜Osteria SPLENDE 公式予約LP</title>
-
-  <!-- ✅ 説明文：予約を意識して強め -->
-  <meta name="description" content="松山市・三番町。30皿以上の料理と穂積シェフの火入れで魅せる、語らないイタリアン。公式予約はこちらから。静かな空間と五感で味わうコースを。">
-
-  <!-- ✅ LP用のキーワード：検索意図と量を意識 -->
-  <meta name="keywords" content="松山, イタリアン, コース料理, ディナー, Osteria SPLENDE, 予約, 穂積, ワイン, ランチ, 記念日, おしゃれレストラン, 松山市ディナー, 愛媛グルメ">
-
-  <!-- ✅ OGP設定：SNSシェア対策 -->
-  <meta property="og:type" content="website" />
+  <meta name="description" content="松山市・三番町。穂積シェフの火入れで魅せる、語らないイタリアン。公式予約はこちら。静かな空間と五感で味わうコース体験を。">
+  <meta name="keywords" content="松山, イタリアン, コース料理, ディナー, Osteria SPLENDE, 予約, 穂積, ワイン, ランチ, 記念日, おしゃれレストラン">
+  <!-- OGP -->
   <meta property="og:title" content="松山・三番町｜コースで選ぶ大人のイタリアン Osteria SPLENDE" />
-  <meta property="og:description" content="火入れ、素材、空間で語る。予約したくなる料理体験を。" />
-  <meta property="og:url" content="https://osteria-splende.jp/lp" />
-  <meta property="og:image" content="https://osteria-splende.jp/img/ogp-image.jpg" />
+  <meta property="og:description" content="火入れ、素材、空間で語る。予約したくなる料理体験。" />
+  <meta property="og:url" content="https://osteria-splende.com/lp" />
+  <meta property="og:image" content="/img/ogp-image.jpg" />
   <meta property="og:site_name" content="Osteria SPLENDE" />
   <meta property="og:locale" content="ja_JP" />
-
-  <!-- ✅ Twitterカード -->
+   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="松山・三番町のイタリアン｜Osteria SPLENDE LP" />
   <meta name="twitter:description" content="語らず、気配で魅せる。穂積シェフの火入れで魅せる静かなコース料理。" />
   <meta name="twitter:image" content="https://osteria-splende.jp/img/ogp-image.jpg" />
-
-  <!-- ✅ Faviconとか（必要なら） -->
-  <link rel="icon" href="/img/logo.webp/">
+  <!-- Fonts & Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- ✅ ページ読み込み高速化系（あとで調整可） -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
+
 <body>
-<header class="hero-section">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="mb-2">ただ、美味しかった、と言ってほしい。</p>
-    <h1>火を、素材に。気配を、皿に。</h1>
-    <p>一口で、記憶が変わる。Osteria SPLENDE。</p> 
-    <a href="#menu" class="btn-hero">料理を見る</a>
-  </div>
-</header>
-
-<section class="hozumi">
-  <div class="hozumi-image" style="background-image: url('img/splende_chef_kitchen_scene.jpg');"></div>
-  <div class="hozumi-text">
-    <p class="hozumi-caption">背中は、語らない。火だけが語る。</p>
-    <p class="hozumi-sub">一皿ごとに、穂積の静かな意志が込められている。</p>
-  </div>
-</section>
-
-<section id="menu" class="section">
-  <div class="container">
-    <h2 class="section-title text-center">メニュー一覧</h2>
-    <div class="swiper menu-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="img/menu1.jpg" alt="料理1" class="img-fluid rounded">
-          <p class="caption">雲丹のトースト・花仕立て</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="img/menu2.jpg" alt="料理2" class="img-fluid rounded">
-          <p class="caption">しらすクリームマウンテン</p>
-        </div>
-        <!-- 追加メニューはここに挿入 -->
-      </div>
-      <div class="swiper-pagination"></div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-inner text-center">
+      <p class="lead">料理も、ワインも、空間も、記憶に残るためにある。</p>
+      <h1>静けさの中で、味わいと向き合う</h1>
+      <p class="sublead">厳選素材と1,000本のワインが誘う、大人のための食体験。</p>
+      <a href="#menu" class="btn-hero">料理を見る</a>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="course" class="section bg-light">
+  <!-- Chef Message Section -->
+<section class="section bg-light hozumi" id="hozumi">
   <div class="container">
-    <h2 class="section-title text-center">コース料理</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6" data-aos="fade-up">
-        <h3>Chef's Signature Course</h3>
-        <p>¥9,800｜美しさと旺さを兼ね備えた珍玉の皿たち</p>
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="img/splende_chef_kitchen_scene.jpg" alt="厨房での仕込み風景" class="img-fluid rounded">
       </div>
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <h3>炎の演出付きコース</h3>
-        <p>¥7,800｜五感で味わう劇場型イタリアン</p>
+      <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
+          <h2 class="section-title">静かな厨房から生まれる、一皿の余韻</h2>
+          <p class="hozumi-sub" >
+          技と感性を重ねて、素材の持ち味をそっと引き出す。<br>
+          手を加えすぎず、削ぎ落としながら、味に深さを残す。<br>
+          静けさの中で、その余韻をじっくりとお楽しみください。
+        </p>
+
       </div>
     </div>
   </div>
 </section>
 
-<section id="reserve" class="section text-center">
+
+  <section id="menu" class="section">
   <div class="container">
-    <h2 class="section-title">ご予約・お問い合わせ</h2>
-    <p>席に限りがございますので、お早めにご予約ください。</p>
-    <a href="tel:08098317607" class="btn btn-gold mt-3">電話で予約する</a>
+    <h2 class="section-title text-center">人気のメニュー</h2>
+
+    <!-- タブ -->
+    <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">ALL</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lunch">LUNCH</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu">MENU</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#course">COURSE</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#drink">DRINK</button></li>
+    </ul>
+
+    <!-- コンテンツ（タブごと）-->
+    <div class="tab-content" id="menuTabContent">
+      <div class="tab-pane fade show active" id="all">
+        <!-- ALLのswiperここに -->
+      </div>
+      <div class="tab-pane fade" id="lunch">
+        <!-- LUNCHのswiperここに -->
+      </div>
+      <div class="tab-pane fade" id="menu">
+        <!-- MENUのswiperここに -->
+      </div>
+      <div class="tab-pane fade" id="course">
+        <!-- COURSEのswiperここに -->
+         <div class="swiper menu-swiper">
+          <div class="swiper-wrapper">
+         <div class="swiper-slide">
+         <a href="img/splende_chef_recommend_course_2025.jpg"
+          class="glightbox card menu-card h-100"
+          data-gallery="menu"
+          data-glightbox="title: 'Degustazione di Splende'; description: '雲丹・鮮魚のタルタル・地鶏のソテー・手打ちボロネーゼ・牛カツレツ…<br>味覚のグラデーションで構成された“大人のご褒美時間”<br><strong>¥9,680</strong>'">
+              <img src="img/splende_chef_recommend_course_2025.jpg"
+                class="card-img-top"
+                alt="Degustazione di Splende" />
+               <div class="card-body">
+              <h5 class="card-title">Degustazione di Splende</h5>
+              <p class="jp-title">スプレンデ贅沢フルコース</p>
+              <p class="card-text">
+                雲丹・鮮魚のタルタル・地鶏のソテー・手打ちボロネーゼ・牛カツレツ…<br>
+                味覚のグラデーションで構成された“大人のご褒美時間”
+              </p>
+              <p class="fw-bold">¥9,680</p>
+            </div>
+          </a>
+        </div>
+          <div class="swiper-slide">
+        <a href="img/splende_table_setting_interior.jpg"
+          class="glightbox card menu-card h-100"
+          data-gallery="menu"
+          data-glightbox="title: '【当日予約OK】6,980円コース';　description: 'アナゴのカルパッチョ、ブルーベリーポルペッティーネなど季節の構成。<br><br>◆ブルスケッタ<br>◆冷製カポナータと生ハム<br>◆鬼北町キジのガラスープ<br>◆タコのガリシア風<br>◆アナゴのカルパッチョ<br>◆パスタ（ラグー or シシリア風リングイネ）<br>◆メイン（ブルーベリー or +¥2,000 和牛）<br>◆ジェラート<br>◆乾杯ドリンク：グラス泡 or ビール<br><br><strong>¥6,980</strong>'">
+          <img src="img/splende_table_setting_interior.jpg" alt="当日コース" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">【当日予約OK】6,980円コース</h5>
+            <p class="card-text">アナゴのカルパッチョやブルーベリーのポルペッティーネなど全9品</p>
+            <p class="fw-bold">¥6,980</p>
+          </div>
+        </a>
+      </div>
+        <div class="swiper-slide">
+        <a href="img/splende_private_room_winewall.jpg"
+          class="glightbox card menu-card h-100"
+          data-gallery="menu"
+          data-glightbox="
+            title: 【当日予約OK】11,000円コース; description: 「愛媛県産黒毛和牛ビステッカ ビーツ プラム」や「鯛 フェンネル」など自慢の料理を贅沢に堪能するプラン。<br><br>◆美豊卵 トリュフ 48ヶ月熟成パルミジャーノレッジャーノ<br>◆カッペリーニ トマトのコンソメ キャビア<br>◆鱧 甘とう美人 はだか麦<br>◆桃 水牛のボッコンチーニ カモミール<br>◆イルヴァレンティノ ラグー ナポレターナ<br>◆鯛 フェンネル<br>◆愛媛県産黒毛和牛ビステッカ ビーツ プラム<br>◆自家製ジェラート<br><br> ＋5,500円(少なめ)/＋8,800円(普通)でペアリング追加可。<br>・BARONS DE ROTHCHILD BRUT<br>・Panamera<br>・TEREE DI MARIO PECORINO<br>・CASAMATTA ROSSO<br>・CASAMATTA BIANCO<br>・Valpolicella Amarone Montigoli<br><br><strong>¥11,000</strong>">
+          <img src="img/splende_private_room_winewall.jpg" class="card-img-top" alt="当日コース 11,000円" />
+          <div class="card-body">
+            <h5 class="card-title">【当日予約OK】11,000円コース</h5>
+            <p class="card-text">黒毛和牛ビステッカや鯛など贅沢8皿＋ワインペアリング対応</p>
+            <p class="fw-bold">¥11,000</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <div class="ribbon">おすすめ</div>
+      <a href="img/splende_table_setting_interior.jpg"
+        class="glightbox card menu-card h-100"
+        data-gallery="menu"
+        data-glightbox="title: 【飲み放題付き】歓送迎会プラン 5,500円; description: 120分飲み放題付き！前菜から肉料理、カフェまでしっかり全6品。<br><br>◆スープ<br>◆前菜<br>◆パスタ料理<br>◆肉料理<br>◆デザート（インスタフォローでジェラートサービス）<br>◆カフェ<br><br><em>※インスタフォロワー特典：ジェラート付き</em><br><br>【飲み放題内容】（LO:30分前）<br>・生ビール ペローニ<br>・ウイスキー 角ハイボール<br>・グラスワイン 赤・白<br>・焼酎（麦）＜ロック / ソーダ / 水 / お湯割り＞<br>・カクテル（指定）<br><br><strong>¥5,500</strong>">
+        <img src="img/splende_table_setting_interior.jpg" alt="歓送迎会コース" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">【飲み放題付き】歓送迎会コース</h5>
+          <p class="card-text">本格イタリアン6品＋120分飲み放題＋ジェラート特典</p>
+          <p class="fw-bold">¥5,500</p>
+        </div>
+      </a>
+    </div>
+       <div class="swiper-slide">
+  <a href="img/splende_wine_shelf_closeup.jpg"
+     class="glightbox card menu-card h-100"
+     data-gallery="course"
+     data-glightbox="title: 【飲み放題付き】本格イタリアン全8品プラン 7,000円; description: 120分飲み放題付き。メインやドルチェも揃った満足コース。<br><br>◆生ハムサラダ<br>◆ブルスケッタ<br>◆チーズ盛り合わせ<br>◆鮮魚カルパッチョ<br>◆いわし香草パン粉焼き<br>◆ポルペッティのボロネーゼソーススパゲティ<br>◆鴨肉のロースト<br>◆ドルチェ<br>◆カフェ<br><br><em>※内容は一例です／季節・仕入れにより変動します</em><br><br>【飲み放題内容】（LO:30分前）<br>・生ビール ペローニ<br>・ウイスキー 角ハイボール<br>・グラスワイン 赤・白<br>・焼酎（麦）＜ロック / ソーダ / 水 / お湯割り＞<br>・カクテル（指定）<br><br><strong>¥7,000</strong>">
+    
+    <img src="img/splende_wine_shelf_closeup.jpg" alt="本格イタリアン全8品プラン" class="card-img-top" />
+    
+    <div class="card-body">
+      <h5 class="card-title">【飲み放題付き】7,000円コース</h5>
+      <p class="card-text">メインやドルチェも含む満足イタリアン全8品＋カフェ</p>
+      <p class="fw-bold">¥7,000</p>
+    </div>
+  </a>
+</div>
+<div class="swiper-pagination"></div>
+
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="tab-pane fade" id="drink">
+        <!-- DRINKのswiperここに（画像あるやつだけ） -->
+      </div>
+    </div>
   </div>
 </section>
 
-<footer class="footer text-center">
-  <p>&copy; 2025 Osteria SPLENDE</p>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-  new Swiper('.menu-swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    pagination: { el: '.swiper-pagination', clickable: true },
+
+  <!-- Course Section -->
+  <!-- <section id="course" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">コース料理</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6" data-aos="fade-up">
+          <h3>Chef's Signature Course</h3>
+          <p>¥9,800｜美しさと旨さを兼ね備えた珠玉の皿たち</p>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <h3>炎の演出付きコース</h3>
+          <p>¥7,800｜五感で味わう劇場型イタリアン</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Reservation Section -->
+  <section id="reserve" class="section text-center">
+    <div class="container">
+      <h2 class="section-title">ご予約・お問い合わせ</h2>
+      <p>席に限りがございますので、お早めにご予約ください。</p>
+      <a href="tel:08098317607" class="btn btn-gold mt-3">電話で予約する</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <p>&copy; 2025 Osteria SPLENDE</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    
+      let swiperInstance = null;
+
+  function initSwiper() {
+    const isMobile = window.innerWidth < 768;
+
+    if (swiperInstance) swiperInstance.destroy(true, true);
+
+    swiperInstance = new Swiper(".menu-swiper", {
+      slidesPerView: isMobile ? 1.2 : 3,
+      spaceBetween: 16,
+      loop: !isMobile,
+      autoplay: !isMobile ? { delay: 3000 } : false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    initSwiper();
+    window.addEventListener("resize", () => {
+      initSwiper();
+    });
   });
+
+  const lightbox = GLightbox({
+    selector: ".glightbox",
+    touchNavigation: true,
+    loop: true,
+    closeOnOutsideClick: true,
+    onOpen: () => {
+      swiperInstance?.autoplay?.stop();
+    },
+    onClose: () => {
+      if (window.innerWidth >= 768) swiperInstance?.autoplay?.start();
+    },
+  });
+
 </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    new Swiper('.menu-swiper', {
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  </script>
 </body>
 </html>
