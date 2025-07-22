@@ -65,16 +65,31 @@
     <h2 class="section-title text-center">人気のメニュー</h2>
 
     <!-- タブ -->
-    <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
+    <!-- <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lunch">LUNCH</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu">MENU</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#course">COURSE</button></li>
       <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#drink">DRINK</button></li>
-    </ul>
+    </ul> -->
+    <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
+  <li class="nav-item">
+    <button class="nav-link active" id="lunch-tab" data-bs-toggle="tab" data-bs-target="#lunch" type="button" role="tab">LUNCH</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" id="menu-tab" data-bs-toggle="tab" data-bs-target="#menu" type="button" role="tab">MENU</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" id="course-tab" data-bs-toggle="tab" data-bs-target="#course" type="button" role="tab">COURSE</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" id="drink-tab" data-bs-toggle="tab" data-bs-target="#drink" type="button" role="tab">DRINK</button>
+  </li>
+</ul>
+
 
     <!-- コンテンツ（タブごと）-->
     <div class="tab-content" id="menuTabContent">
-      <div class="tab-pane fade" id="lunch">
+      <div class="tab-pane fade show active" id="lunch">
         <!-- LUNCHのswiperここに -->
           <div class="swiper lunch-swiper">
           <div class="swiper-wrapper">
@@ -82,10 +97,10 @@
           <div class="ribbon">おすすめ</div>
           <a href="img/lunchset.jpg"
             class="glightbox card menu-card h-100"
-            data-gallery="menu"
+            data-gallery="lunch"
             data-glightbox="title: '本日のパスタランチ（季節のパスタ）'; description: '全てのランチにスープ・サラダ・バケットが付きます。<br>※写真はホタルイカのパスタランチです<br><strong>¥1,738</strong>'">
             
-            <img src="img/lunchset.jpg"" class="card-img-top" alt="本日のパスタランチ（季節のパスタ）" />
+            <img src="img/lunchset.jpg" class="card-img-top" alt="本日のパスタランチ（季節のパスタ）" />
             
             <div class="card-body">
               <h5 class="card-title">本日のパスタランチ（季節のパスタ）</h5>
@@ -112,7 +127,7 @@
         <div class="swiper-slide">
           <a href="img/Sardine Oil Pasta.jpg"
             class="glightbox card menu-card h-100"
-            data-gallery="menu"
+            data-gallery="lunch"
             data-glightbox="title: '大羽イワシのオイルパスタ'; description: '新鮮な大羽イワシをふんだんに使用。<br>シェフ特製のブロードで丁寧に仕上げた、開店以来の看板メニュー。<br><em>使用パスタ：イタリア・モノグラーノ社 高級乾麺</em><br><strong>¥1,518</strong>'">
             
             <img src="img/Sardine Oil Pasta.jpg" class="card-img-top" alt="大羽イワシのオイルパスタ" />
@@ -129,7 +144,7 @@
             <div class="swiper-slide">
             <a href="img/wagyu_cutlet_double_texture.jpg"
               class="glightbox card menu-card h-100"
-              data-gallery="menu"
+              data-gallery="lunch"
               data-glightbox="title: '媛ポークのラグーパスタ'; description: '愛媛県産の粗挽きポークをじっくり煮込んだ優しい味わいのラグー。<br>麺は、ミシュラン星付き店も愛用する「冨士麺ず工房」の生麺を使用。<br>お子様にも大好評の一皿。<br><strong>¥1,518</strong>'">
               
               <img src="img/wagyu_cutlet_double_texture.jpg" class="card-img-top" alt="媛ポークのラグーパスタ" />
@@ -146,7 +161,7 @@
               <div class="swiper-slide">
               <a href="img/scallop_lemon_cream_fettuccine.jpg"
                 class="glightbox card menu-card h-100"
-                data-gallery="menu"
+                data-gallery="lunch"
                 data-glightbox="title: 'ホタテとレモンのクリームパスタ'; description: '冨士麺ず工房の生タリアテッレに、新鮮な帆立と大島レモンの香り。<br>生クリームと熟成パルミジャーノで仕上げた、スプレンデ自慢の一皿。<br><strong>¥1,628</strong>'">
                 <img src="img/scallop_lemon_cream_fettuccine.jpg" class="card-img-top" alt="ホタテとレモンのクリームパスタ" />
                 <div class="card-body">
@@ -162,7 +177,7 @@
               <div class="swiper-slide">
               <a href="img/seafoodpasta.jpg"
                 class="glightbox card menu-card h-100"
-                data-gallery="menu"
+                data-gallery="lunch"
                 data-glightbox="title: '本日のパスタ'; description: '季節の素材をシェフがセレクト。<br>その日だけの一皿をお楽しみください。<br><strong>¥1,740</strong>'">
                 <img src="img/seafoodpasta.jpg" class="card-img-top" alt="本日のパスタ" />
                 <div class="card-body">
@@ -178,7 +193,7 @@
             <div class="swiper-slide">
             <a href="img/bitter_beer_pairing_pasta.jpg"
               class="glightbox card menu-card h-100"
-              data-gallery="menu"
+              data-gallery="lunch"
               data-glightbox="title: 'パスタ・コン・レ・サルテ'; description: 'トマトペーストの酸味が効いた、イタリア伝統の味わい。<br>ペローニビールとの相性も抜群。<br><strong>¥1,738</strong>'">
               <img src="img/bitter_beer_pairing_pasta.jpg" class="card-img-top" alt="パスタ・コン・レ・サルテ" />
               <div class="card-body">
@@ -194,7 +209,7 @@
             <div class="swiper-slide">
             <a href="img/lunchcourse.jpg"
               class="glightbox card menu-card h-100"
-              data-gallery="menu"
+              data-gallery="lunch"
               data-glightbox="title: 'ミニコース'; description: '季節のスープ、前菜盛り合わせ、季節のパスタ、バケット、メイン、ドルチェ、カフェのフルセット。<br>※鴨肉をメインにした場合は＋¥1,000。<br>※魚・和牛コースは前日までの予約制（¥5,000）<br><strong>¥3,168</strong>'">
               <img src="img/lunchcourse.jpg" class="card-img-top" alt="ミニコース" />
               <div class="card-body">
@@ -210,7 +225,7 @@
           <div class="swiper-slide">
             <a href="img/wagyu_redwine_miso_braise.jpg"
               class="glightbox card menu-card h-100"
-              data-gallery="menu"
+              data-gallery="lunch"
               data-glightbox="title: '煮込みハンバーグ'; description: '和牛の手捏ねハンバーグに大洲の巽味噌を隠し味としてプラス。<br>濃厚な旨みで大人も子供も笑顔に。<br><strong>¥1,738</strong>'">
               <img src="img/wagyu_redwine_miso_braise.jpg" class="card-img-top" alt="煮込みハンバーグ" />
               <div class="card-body">
@@ -225,7 +240,7 @@
           <div class="swiper-slide">
             <a href="img/beef_mushroom_foil_bake_plate.jpg"
               class="glightbox card menu-card h-100"
-              data-gallery="menu"
+              data-gallery="lunch"
               data-glightbox="title: '鉄板デミグラスソースハンバーグ'; description: '学生時代の思い出を詰めた復刻版ハンバーグ。<br>自家製デミグラスをホイル包みにして、じっくり鉄板でアツアツに。<br><strong>¥1,738</strong>'">
               <img src="img/beef_mushroom_foil_bake_plate.jpg" class="card-img-top" alt="鉄板デミグラスソースハンバーグ" />
               <div class="card-body">
@@ -240,7 +255,7 @@
           <div class="swiper-slide">
             <a href="img/dessert_02 (1).jpg"
               class="glightbox card menu-card h-100"
-              data-gallery="menu"
+              data-gallery="lunch"
               data-glightbox="title: '自家製 ガトーショコラテリーヌ'; description: '絶妙な触感で食後の口福を演出します。<br>お店のパティシエ候補生の自信作。<br><strong>¥748</strong>'">
               <img src="img/dessert_02 (1).jpg" class="card-img-top" alt="自家製 ガトーショコラテリーヌ" />
               <div class="card-body">
@@ -257,7 +272,7 @@
         </div>
       </div>
 
-        <div class="tab-pane fade show active" id="menu">
+        <div class="tab-pane fade" id="menu">
         <!-- MENUのswiperここに -->
         <div class="swiper menu-swiper">
           <div class="swiper-wrapper">
@@ -458,7 +473,7 @@
          <div class="swiper-slide">
          <a href="img/splende_chef_recommend_course_2025.jpg"
           class="glightbox card menu-card h-100"
-          data-gallery="menu"
+          data-gallery="course"
           data-glightbox="title: 'Degustazione di Splende'; description: '雲丹・鮮魚のタルタル・地鶏のソテー・手打ちボロネーゼ・牛カツレツ…<br>味覚のグラデーションで構成された“大人のご褒美時間”<br><strong>¥9,680</strong>'">
               <img src="img/splende_chef_recommend_course_2025.jpg"
                 class="card-img-top"
@@ -477,8 +492,8 @@
           <div class="swiper-slide">
         <a href="img/splende_table_setting_interior.jpg"
           class="glightbox card menu-card h-100"
-          data-gallery="menu"
-          data-glightbox="title: '【当日予約OK】6,980円コース';　description: 'アナゴのカルパッチョ、ブルーベリーポルペッティーネなど季節の構成。<br><br>◆ブルスケッタ<br>◆冷製カポナータと生ハム<br>◆鬼北町キジのガラスープ<br>◆タコのガリシア風<br>◆アナゴのカルパッチョ<br>◆パスタ（ラグー or シシリア風リングイネ）<br>◆メイン（ブルーベリー or +¥2,000 和牛）<br>◆ジェラート<br>◆乾杯ドリンク：グラス泡 or ビール<br><br><strong>¥6,980</strong>'">
+          data-gallery="course"
+          data-glightbox="title: '【当日予約OK】6,980円コース'; description: 'アナゴのカルパッチョ、ブルーベリーポルペッティーネなど季節の構成。<br><br>◆ブルスケッタ<br>◆冷製カポナータと生ハム<br>◆鬼北町キジのガラスープ<br>◆タコのガリシア風<br>◆アナゴのカルパッチョ<br>◆パスタ（ラグー or シシリア風リングイネ）<br>◆メイン（ブルーベリー or +¥2,000 和牛）<br>◆ジェラート<br>◆乾杯ドリンク：グラス泡 or ビール<br><br><strong>¥6,980</strong>'">
           <img src="img/splende_table_setting_interior.jpg" alt="当日コース" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">【当日予約OK】6,980円コース</h5>
@@ -490,7 +505,7 @@
         <div class="swiper-slide">
         <a href="img/splende_private_room_winewall.jpg"
           class="glightbox card menu-card h-100"
-          data-gallery="menu"
+          data-gallery="course"
           data-glightbox="
             title: 【当日予約OK】11,000円コース; description: 「愛媛県産黒毛和牛ビステッカ ビーツ プラム」や「鯛 フェンネル」など自慢の料理を贅沢に堪能するプラン。<br><br>◆美豊卵 トリュフ 48ヶ月熟成パルミジャーノレッジャーノ<br>◆カッペリーニ トマトのコンソメ キャビア<br>◆鱧 甘とう美人 はだか麦<br>◆桃 水牛のボッコンチーニ カモミール<br>◆イルヴァレンティノ ラグー ナポレターナ<br>◆鯛 フェンネル<br>◆愛媛県産黒毛和牛ビステッカ ビーツ プラム<br>◆自家製ジェラート<br><br> ＋5,500円(少なめ)/＋8,800円(普通)でペアリング追加可。<br>・BARONS DE ROTHCHILD BRUT<br>・Panamera<br>・TEREE DI MARIO PECORINO<br>・CASAMATTA ROSSO<br>・CASAMATTA BIANCO<br>・Valpolicella Amarone Montigoli<br><br><strong>¥11,000</strong>">
           <img src="img/splende_private_room_winewall.jpg" class="card-img-top" alt="当日コース 11,000円" />
@@ -505,7 +520,7 @@
         <div class="ribbon">おすすめ</div>
       <a href="img/splende_table_setting_interior.jpg"
         class="glightbox card menu-card h-100"
-        data-gallery="menu"
+        data-gallery="course"
         data-glightbox="title: 【飲み放題付き】歓送迎会プラン 5,500円; description: 120分飲み放題付き！前菜から肉料理、カフェまでしっかり全6品。<br><br>◆スープ<br>◆前菜<br>◆パスタ料理<br>◆肉料理<br>◆デザート（インスタフォローでジェラートサービス）<br>◆カフェ<br><br><em>※インスタフォロワー特典：ジェラート付き</em><br><br>【飲み放題内容】（LO:30分前）<br>・生ビール ペローニ<br>・ウイスキー 角ハイボール<br>・グラスワイン 赤・白<br>・焼酎（麦）＜ロック / ソーダ / 水 / お湯割り＞<br>・カクテル（指定）<br><br><strong>¥5,500</strong>">
         <img src="img/splende_table_setting_interior.jpg" alt="歓送迎会コース" class="card-img-top" />
         <div class="card-body">
@@ -538,7 +553,17 @@
       </div>
       <div class="tab-pane fade" id="drink">
         <!-- DRINKのswiperここに（画像あるやつだけ） -->
-         <div class="accordion" id="accordionDrinks">
+    
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light" id="drink">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">ドリンク</h2>
+    <div class="accordion" id="accordionDrinks">
       <!-- ワイン -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingWine">
@@ -621,13 +646,8 @@
         </div>
       </div>
     </div>
-
-      </div>
     </div>
-  </div>
-</section>
-
-
+    </section>
 
   <!-- Course Section -->
   <!-- <section id="course" class="section bg-light">
@@ -666,7 +686,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     
- let swiperInstances = {};
+let swiperInstances = {};
 const initializedTabs = {};
 
 function initSwiper(tabId, swiperClass) {
@@ -674,14 +694,13 @@ function initSwiper(tabId, swiperClass) {
   const container = document.querySelector(`#${tabId} .${swiperClass}`);
   if (!container) return;
 
-  // すでに初期化済みなら削除してから
+  // すでに初期化済みなら一旦破壊
   if (swiperInstances[tabId]) {
     swiperInstances[tabId].destroy(true, true);
   }
 
   const slides = container.querySelectorAll('.swiper-slide');
-  const slideCount = slides.length;
-  const shouldLoop = !isMobile && slideCount > 3;
+  const shouldLoop = !isMobile && slides.length > 3;
 
   swiperInstances[tabId] = new Swiper(container, {
     slidesPerView: isMobile ? 1.2 : 3,
@@ -695,52 +714,63 @@ function initSwiper(tabId, swiperClass) {
   });
 }
 
+// タブが表示された瞬間に初期化＆修正処理
+document.querySelectorAll('[data-bs-toggle="tab"]').forEach(button => {
+  button.addEventListener("shown.bs.tab", e => {
+    const targetId = e.target.getAttribute("data-bs-target").replace("#", "");
+
+    // 初期化してないなら今やる
+    if (!initializedTabs[targetId]) {
+      initSwiper(targetId, `${targetId}-swiper`);
+      initializedTabs[targetId] = true;
+    }
+
+    // 表示された後に強制 update で1段に揃える
+    setTimeout(() => {
+      const swiper = swiperInstances[targetId];
+      if (swiper) {
+        swiper.update();
+        swiper.updateSize();
+        swiper.slideTo(0);
+      }
+    }, 50);
+  });
+});
+
+// 最初のアクティブタブだけ自動初期化
 document.addEventListener("DOMContentLoaded", () => {
-  const activeTab = document.querySelector(".tab-pane.show.active");
-  const activeId = activeTab?.id;
+  const active = document.querySelector(".tab-pane.active.show");
+  const activeId = active?.id;
   if (activeId) {
     initSwiper(activeId, `${activeId}-swiper`);
     initializedTabs[activeId] = true;
   }
+});
+button.addEventListener("shown.bs.tab", e => {
+  const targetId = e.target.getAttribute("data-bs-target").replace("#", "");
 
-  // タブ切り替えでSwiper初期化
-  document.querySelectorAll('[data-bs-toggle="tab"]').forEach(button => {
-    button.addEventListener("shown.bs.tab", e => {
-      const targetId = e.target.getAttribute("data-bs-target").replace("#", "");
-      if (!initializedTabs[targetId]) {
-        initSwiper(targetId, `${targetId}-swiper`);
-        initializedTabs[targetId] = true;
+  // 初期化済みでも再描画時に再調整したい
+  if (!initializedTabs[targetId]) {
+    initSwiper(targetId, `${targetId}-swiper`);
+    initializedTabs[targetId] = true;
+  }
+
+  // ⚠️ Swiperの崩壊対策：描画後に再update（これ重要）
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      const swiper = swiperInstances[targetId];
+      if (swiper) {
+        swiper.update();
+        swiper.updateSize();
+        swiper.slideTo(0, 0); // 位置リセットも保険で
       }
-    });
-  });
-
-  // リサイズ時に再初期化（全Swiper）
-  window.addEventListener("resize", () => {
-    Object.keys(initializedTabs).forEach(tabId => {
-      initSwiper(tabId, `${tabId}-swiper`);
-    });
+    }, 100); // 描画落ち着くまでタイミング調整
   });
 });
-
-// GLightboxとSwiper連携（ポップアップでautoplay止める）
-const lightbox = GLightbox({
-  selector: ".glightbox",
-  touchNavigation: true,
-  loop: true,
-  closeOnOutsideClick: true,
-  onOpen: () => {
-    Object.values(swiperInstances).forEach(swiper => swiper?.autoplay?.stop());
-  },
-  onClose: () => {
-    Object.values(swiperInstances).forEach(swiper => {
-      if (window.innerWidth >= 768) swiper?.autoplay?.start();
-    });
-  },
-});
-
 
 
 </script>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
