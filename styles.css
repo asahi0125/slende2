@@ -49,7 +49,7 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 85vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +75,7 @@ section {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-size: clamp(1.5rem, 5vw, 3.6rem);
   margin-bottom: 1rem;
 }
 
@@ -116,12 +116,12 @@ section {
 }
 
 .hozumi-photo {
-  max-width: 480px;
+  max-width: 600px;
   margin-bottom: 2rem;
 }
 
 .hozumi-caption {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
   margin-bottom: 1rem;
   color: #555;
@@ -138,6 +138,12 @@ section {
     text-align: left;
     align-items: flex-start;
   }
+  .hozumi-caption {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #555;
+}
 }
 
 

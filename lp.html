@@ -771,6 +771,25 @@ button.addEventListener("shown.bs.tab", e => {
 
 </script>
 
+<script>
+  const lightbox = GLightbox({
+  selector: ".glightbox",
+  touchNavigation: true,
+  loop: true,
+  closeOnOutsideClick: true,
+  onOpen: () => {
+    // Swiperのautoplayを全部止める（ポップアップ中）
+    Object.values(swiperInstances).forEach(swiper => swiper?.autoplay?.stop());
+  },
+  onClose: () => {
+    // 再開はPCだけ（モバイルはうるさい）
+    Object.values(swiperInstances).forEach(swiper => {
+      if (window.innerWidth >= 768) swiper?.autoplay?.start();
+    });
+  },
+});
+</script>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
