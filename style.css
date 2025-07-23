@@ -23,12 +23,6 @@
   height: 100%;
 }
 
-
-.hero > div {
-  position: relative;
-  z-index: 2;
-}
-
 .hero-section h1, .hero-section p {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
@@ -274,6 +268,85 @@ h1, .display-4 {
   }
 }
 
+
+.cta-block {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+
+.daily-cta-button {
+  text-align: center;
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  border: 1px solid #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+  background: #fff;
+  color: #333;
+}
+
+.daily-cta-button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.cta-choice {
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Yu Mincho", serif;
+}
+
+.cta-choice h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.cta-choice .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-choice .cta-buttons a {
+  text-decoration: none;
+  border: 1px solid #333;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #333;
+}
+
+.cta-choice .cta-buttons a:hover {
+  background-color: #9b6f6fd8;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- レスポンシブ --- */
+@media (max-width: 600px) {
+  .cta-choice h2 {
+    font-size: 1.2rem;
+  }
+
+  .cta-choice .cta-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cta-choice .cta-buttons a {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
 .cta-slide {
   border: 2px dashed #d9c18b;
   border-radius: 12px;
@@ -301,6 +374,7 @@ h1, .display-4 {
   color: #fff;
   text-decoration: none; /* 念のためホバー時も明示的に消す */
 }
+
 
 .menu-swiper .swiper-wrapper {
   display: flex; /* 念のため強制 */
@@ -388,6 +462,17 @@ h1, .display-4 {
 }
 
 /* 個別スタイル */
+.footer-sns a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;     /* ちょい小さめ。元が48pxとかなら */
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.2rem; /* アイコンの中身の大きさも縮小 */
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 .footer-sns a.instagram {
   background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf);
 }
@@ -410,6 +495,12 @@ h1, .display-4 {
   opacity: 0.9;
 }
 
+.footer-logo img {
+  max-height: 80px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
 .cta-button {
   display: flex;
   flex-direction: column;

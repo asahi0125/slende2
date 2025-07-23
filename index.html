@@ -67,7 +67,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6" data-aos="fade-right">
-        <img src="img/about_splende.webp" alt="店内" class="img-fluid rounded">
+        <img src="img/splende_private_room_winewall.jpg" alt="店内" class="img-fluid rounded">
       </div>
       <div class="col-md-6" data-aos="fade-left">
         <h2 class="mb-4">私たちのこだわり</h2>
@@ -242,11 +242,9 @@
   </div>
 </div>
 
-
+<div id="cta-container" class="cta-choice"></div>
    
-   <div class="menu-cta text-center mt-5">
-  <a href="lp.html" class="cta-button-gold">お店について</a>
-</div>
+   
     
 
     </div> <!-- /.tab-content -->
@@ -298,6 +296,9 @@
 </section>
 
 <footer class="footer text-center">
+     <div class="footer-logo mb-3">
+    <img src="img/splende_logo.png" alt="Osteria Splende ロゴ" height="80">
+  </div>
   
   <p>&copy; 2025 Osteria SPLENDE All Rights Reserved.</p>
   <div class="footer-sns mb-2">
@@ -360,6 +361,54 @@ function initAllSwipers() {
     });
   });
 </script>
+<script>
+ 
+  const ctaContainer = document.getElementById("cta-container");
+
+  // 曜日ごとのCTAパターン
+  const ctaPatterns = [
+    // 0: Sunday
+    `<div class="cta-block">
+      <p>あなたにぴったりの一皿は？</p>
+      <a class="daily-cta-button" href="lp.html#menu">メニューを見る</a>
+    </div>`,
+    // 1: Monday
+    `<div class="cta-block">
+      <p>あなたにぴったりの一皿は？</p>
+      <a class="daily-cta-button" href="lp.html#menu?type=lunch">ランチを楽しむ</a>
+    </div>`,
+    // 2: Tuesday
+    `<div class="cta-block">
+      <p>あなたにぴったりの一皿は？</p>
+      <a class="daily-cta-button" href="lp.html#menu?type=dinner">ディナーで味わう</a>
+    </div>`,
+    // 3: Wednesday
+    `<div class="cta-block">
+      <p>あなたにぴったりの一皿は？</p>
+      <a class="daily-cta-button" href="lp.html#menu?type=course">贅沢なコースを選ぶ</a>
+    </div>`,
+    // 4: Thursday
+    `<div class="cta-block">
+      <p>あなたにぴったりの一皿は？</p>
+      <a class="daily-cta-button" href="lp.html#menu">今日は何食べる？</a>
+    </div>`,
+    // 5: Friday
+    `<div class="cta-block">
+      <p>気分で選ぼう、今夜のご褒美</p>
+      <a class="daily-cta-button" href="lp.html#menu">メニューをチェック</a>
+    </div>`,
+    // 6: Saturday
+    `<div class="cta-block">
+      <p>週末の贅沢、一皿から</p>
+      <a class="daily-cta-button" href="lp.html#menu?type=course">ディナーコースを見る</a>
+    </div>`,
+  ];
+
+  const today = new Date().getDay(); // 0 (Sun) - 6 (Sat)
+  ctaContainer.innerHTML = ctaPatterns[today];
+</script>
+
+
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

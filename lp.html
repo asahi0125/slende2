@@ -30,12 +30,12 @@
 
 <body>
   <!-- Hero Section -->
-  <header class="hero">
+  <header id="top" class="hero">
     <div class="hero-inner text-center">
       <p class="lead">料理も、ワインも、空間も、記憶に残るためにある。</p>
       <h1>静けさの中で、味わいと向き合う</h1>
       <p class="sublead">厳選素材と1,000本のワインが誘う、大人のための食体験。</p>
-      <a href="#menu" class="btn-hero">料理を見る</a>
+      <a href="#menu-section" class="btn-hero">料理を見る</a>
     </div>
   </header>
 
@@ -64,13 +64,7 @@
   <div class="container">
     <h2 class="section-title text-center">人気のメニュー</h2>
 
-    <!-- タブ -->
-    <!-- <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#lunch">LUNCH</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#menu">MENU</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#course">COURSE</button></li>
-      <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#drink">DRINK</button></li>
-    </ul> -->
+ 
     <ul class="nav nav-tabs menu-tabs justify-content-center mb-4" id="menuTab" role="tablist">
   <li class="nav-item">
     <button class="nav-link active" id="lunch-tab" data-bs-toggle="tab" data-bs-target="#lunch" type="button" role="tab">LUNCH</button>
@@ -81,9 +75,9 @@
   <li class="nav-item">
     <button class="nav-link" id="course-tab" data-bs-toggle="tab" data-bs-target="#course" type="button" role="tab">COURSE</button>
   </li>
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <button class="nav-link" id="drink-tab" data-bs-toggle="tab" data-bs-target="#drink" type="button" role="tab">DRINK</button>
-  </li>
+  </li> -->
 </ul>
 
 
@@ -551,38 +545,73 @@
       </div>
     </div>
       </div>
-      <div class="tab-pane fade" id="drink">
-        <!-- DRINKのswiperここに（画像あるやつだけ） -->
-    
+      <!-- <div class="tab-pane fade" id="drink">
+        
 
+      </div> -->
+    </div>
+    <div class="cta-bridge text-center my-5">
+  <a href="#wine-feature" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+    この料理に合うドリンクを選ぶ
+  </a>
+</div>
+  </div>
+</section>
+
+<section class="section bg-light" id="drink-intro">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="img/splende_winetable_window_night.jpg" alt="ワイン空間" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
+        <h2 class="section-title">記憶に残る、一皿の余韻とともに</h2>
+        <p class="text-muted">
+          一皿の余韻に、そっと寄り添う一杯。<br>
+          飲み物は、季節と気分と時間の中で静かに選ばれ、<br>
+          体験の最後に、記憶として残るものです。
+        </p>
       </div>
     </div>
   </div>
 </section>
-
-<section class="section bg-light" id="drink">
+<section class="section bg-light" id="drink-section">
   <div class="container">
-    <h2 class="section-title text-center mb-5">ドリンク</h2>
+
+    <!--  キャッチ（詩的導入） -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="section-title">気分に合ったドリンクをお選びください。</h2>
+      <p class="text-muted">どの一杯が、今の気分にぴったりか。<br>
+そんな選ぶ楽しみもまた、<br>このひとときの味わいです。</p>
+    </div>
+
+    <!--  アコーディオンメニュータイトル（情報として切り替え） -->
+    <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="section-subtitle">ドリンクメニュー一覧</h3>
+    </div>
+
+    <!--  アコーディオン本体 -->
     <div class="accordion" id="accordionDrinks">
-      <!-- ワイン -->
-      <div class="accordion-item">
+
+      <!-- ワイン & シャンパン -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
         <h2 class="accordion-header" id="headingWine">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWine" aria-expanded="true" aria-controls="collapseWine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWine" aria-expanded="false" aria-controls="collapseWine">
             ワイン & シャンパン
           </button>
         </h2>
-        <div id="collapseWine" class="accordion-collapse collapse show" aria-labelledby="headingWine" data-bs-parent="#accordionDrinks">
+        <div id="collapseWine" class="accordion-collapse collapse" aria-labelledby="headingWine" data-bs-parent="#accordionDrinks">
           <div class="accordion-body">
-            <p><strong>グラスワイン</strong><br>赤／白 各 880円〜</p>
-            <p><strong>グラスシャンパン</strong><br>1,100円〜</p>
-            <p><strong>ボトルワイン</strong><br>仕入れ価格＋3,000円〜（5,000円〜）</p>
-            <p class="text-muted small">※ メニュー外も多数あります。スタッフまで</p>
+            <p><strong>グラスワイン（赤／白）</strong><br>各 ¥880〜</p>
+            <p><strong>グラスシャンパン</strong><br>¥1,100〜</p>
+            <p><strong>ボトルワイン</strong><br>仕入れ価格＋¥3,000〜（¥5,000〜）</p>
+            <p class="text-muted small">※ メニュー外もございます。スタッフまでお声がけください。</p>
           </div>
         </div>
       </div>
 
       <!-- ビール・ハイボール -->
-      <div class="accordion-item">
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
         <h2 class="accordion-header" id="headingBeer">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeer" aria-expanded="false" aria-controls="collapseBeer">
             ビール・ハイボール
@@ -590,48 +619,48 @@
         </h2>
         <div id="collapseBeer" class="accordion-collapse collapse" aria-labelledby="headingBeer" data-bs-parent="#accordionDrinks">
           <div class="accordion-body">
-            <p><strong>生ビール・モレッティ</strong><br>各 730円〜</p>
-            <p><strong>ランチ生ビール</strong> 550円<br><strong>ミニ生</strong> 418円</p>
-            <p><strong>ハイボール（角・白州）</strong> 各 880円〜<br>ランチ角ハイ 550円</p>
+            <p><strong>生ビール・モレッティ</strong><br>各 ¥730〜</p>
+            <p><strong>ランチ生ビール</strong> ¥550<br><strong>ミニ生</strong> ¥418</p>
+            <p><strong>ハイボール（角・白州）</strong> 各 ¥880〜<br>ランチ角ハイ ¥550</p>
           </div>
         </div>
       </div>
 
       <!-- カクテル・ノンアル -->
-      <div class="accordion-item">
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
         <h2 class="accordion-header" id="headingCocktail">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCocktail" aria-expanded="false" aria-controls="collapseCocktail">
-            カクテル & ノンアルコール
+            カクテル・ノンアルコール
           </button>
         </h2>
         <div id="collapseCocktail" class="accordion-collapse collapse" aria-labelledby="headingCocktail" data-bs-parent="#accordionDrinks">
           <div class="accordion-body">
-            <p><strong>ジントニック</strong> 780円</p>
-            <p><strong>ノンアルコールビール</strong> 580円</p>
+            <p><strong>ジントニック</strong> ¥780</p>
+            <p><strong>ノンアルコールビール</strong> ¥580</p>
           </div>
         </div>
       </div>
 
-      <!-- ソフトドリンク -->
-      <div class="accordion-item">
+      <!-- ソフトドリンク・カフェ -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
         <h2 class="accordion-header" id="headingSoft">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSoft" aria-expanded="false" aria-controls="collapseSoft">
-            ソフトドリンク & カフェ
+            ソフトドリンク・カフェ
           </button>
         </h2>
         <div id="collapseSoft" class="accordion-collapse collapse" aria-labelledby="headingSoft" data-bs-parent="#accordionDrinks">
           <div class="accordion-body">
-            <p><strong>クラフトコーラ・ブラッドオレンジ</strong> 各 400円〜</p>
-            <p><strong>グレープフルーツ／ペリエ</strong> 各 400円</p>
-            <p><strong>サンペレグリノ／アクアパンナ</strong> 各 400円〜</p>
-            <p><strong>コーヒー／エスプレッソ／カフェラテ</strong> 各 400円</p>
-            <p>ランチ：コーヒー 330円、エスプレッソ／紅茶／カフェラテ 〜</p>
+            <p><strong>クラフトコーラ・ブラッドオレンジ</strong> 各 ¥400〜</p>
+            <p><strong>グレープフルーツ／ペリエ</strong> 各 ¥400</p>
+            <p><strong>サンペレグリノ／アクアパンナ</strong> 各 ¥400〜</p>
+            <p><strong>コーヒー／エスプレッソ／カフェラテ</strong> 各 ¥400</p>
+            <p>ランチ：コーヒー ¥330、エスプレッソ／紅茶／カフェラテ 〜</p>
           </div>
         </div>
       </div>
 
-      <!-- 飲み放題 -->
-      <div class="accordion-item">
+      <!-- 飲み放題プラン -->
+      <div class="accordion-item" data-aos="fade-up" data-aos-delay="350">
         <h2 class="accordion-header" id="headingNomihodai">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNomihodai" aria-expanded="false" aria-controls="collapseNomihodai">
             飲み放題プラン
@@ -639,52 +668,235 @@
         </h2>
         <div id="collapseNomihodai" class="accordion-collapse collapse" aria-labelledby="headingNomihodai" data-bs-parent="#accordionDrinks">
           <div class="accordion-body">
-            <p><strong>料金</strong>：2,200円／120分制（90分LO）</p>
+            <p><strong>料金</strong>：¥2,200 ／120分制（90分LO）</p>
             <p><strong>条件</strong>：コース＋4名様以上より</p>
             <p><strong>内容</strong>：生ビール、グラスワイン、シャンパン、ハイボール、カクテル各種、ソフトドリンク、ノンアル、焼酎など</p>
+            <p class="text-muted small">※ 詳しくはスタッフまでお気軽にご相談ください。</p>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-    </section>
 
-  <!-- Course Section -->
-  <!-- <section id="course" class="section bg-light">
-    <div class="container">
-      <h2 class="section-title text-center">コース料理</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6" data-aos="fade-up">
-          <h3>Chef's Signature Course</h3>
-          <p>¥9,800｜美しさと旨さを兼ね備えた珠玉の皿たち</p>
-        </div>
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <h3>炎の演出付きコース</h3>
-          <p>¥7,800｜五感で味わう劇場型イタリアン</p>
-        </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-light" id="wine-feature">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <a href="img/splende_private_room_winewall.jpg" data-bs-toggle="modal" data-bs-target="#wineModal">
+          <img src="img/splende_private_room_winewall.jpg" alt="プライベートルームとワインセラー" class="img-fluid rounded shadow-sm">
+        </a>
+      </div>
+      <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
+        <h2 class="section-title">ワインと過ごす、静かな夜</h2>
+        <p class="text-muted">
+          店内奥にあるプライベートルームでは、<br>
+          ワインセラーに囲まれた落ち着いた時間をお過ごしいただけます。<br>
+          大切な会話に寄り添う、静かなグラスのひとときを。
+        </p>
+        <!-- <a href="#drink-section" class="btn btn-outline-dark mt-4">ドリンクメニューを見る</a> -->
       </div>
     </div>
-  </section> -->
+    <div class="cta-bridge text-center my-5">
+  <a href="#splende-course" class="btn btn-outline-dark btn-lg rounded-pill px-4">
+    ペアリングを楽しむコースを見る
+  </a>
+</div>
+  </div>
+</section>
 
-  <!-- Reservation Section -->
+<!-- モーダル定義 -->
+<div class="modal fade" id="wineModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0">
+      <img src="img/splende_private_room_winewall.jpg" class="img-fluid rounded" alt="ワイン空間拡大">
+    </div>
+  </div>
+</div>
+  
+<!-- SPLENDE Dinner Section -->
+<section class="splende-dinner-hero text-white py-5" style="background-color: #1f1f1f;" id="splende-course">
+  <div class="container d-flex flex-column align-items-center" data-aos="fade-up">
+    <img src="img/splende_pan_fry_flame_action.jpg" alt="調理中の料理" class="hero-fire mb-4" />
+    <h2 class="display-5 fw-bold text-center">SPLENDE Dinner</h2>
+    <p class="lead text-center">
+      食材が、火にかけられ、命を宿す瞬間。<br />
+      一夜を彩るすべての一皿は、ここから生まれます。
+    </p>
+  </div>
+</section>
+
+
+<!-- SPLENDE Dinner Course Slider -->
+<section class="splende-course py-5">
+  <div class="container">
+    <div class="swiper splendeSwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Example Slide 1 -->
+        <div class="swiper-slide">
+          <a href="img/04_tagliatelle_ragu_closeup_1600w.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Roasted Local Chicken'; description: '地鶏のソテー。香ばしく焼き上げた皮とジューシーな旨味。'">
+            <img src="img/04_tagliatelle_ragu_closeup_1600w.jpg" class="card-img-top" alt="Roasted Local Chicken">
+            <div class="card-body">
+              <h5 class="card-title">Roasted Local Chicken</h5>
+              <p class="card-subtitle text-muted">地鶏のソテー</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Example Slide 2 -->
+        <div class="swiper-slide">
+          <a href="img/salmon_tartare_microsalad.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Fresh Fish Tartare'; description: '鮮魚のタルタル。爽やかな酸味と食感のコントラスト。'">
+            <img src="img/salmon_tartare_microsalad.jpg" class="card-img-top" alt="Fresh Fish Tartare">
+            <div class="card-body">
+              <h5 class="card-title">Fresh Fish Tartare</h5>
+              <p class="card-subtitle text-muted">鮮魚のタルタル</p>
+            </div>
+          </a>
+        </div>
+                    <!-- Slide 3: 前菜盛り合わせ -->
+        <div class="swiper-slide">
+          <a href="img/sea_urchin_toast_blossom.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Assorted Appetizers'; description: 'いくら・鴨・ウニ──素材の競演。ひと口ごとに驚きが訪れる、夜の幕開けの一皿。'">
+            <img src="img/sea_urchin_toast_blossom.jpg" class="card-img-top" alt="Assorted Appetizers">
+            <div class="card-body">
+              <h5 class="card-title">Assorted Appetizers</h5>
+              <p class="card-subtitle text-muted">いくら・鴨・ウニ 前菜盛り合わせ</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Slide 4: ボロネーゼ -->
+        <div class="swiper-slide">
+          <a href="img/wagyu_cutlet_double_texture.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Bolognese Tagliatelle'; description: '濃厚なソースが絡む、手打ちのタリアテッレ。パルミジャーノの香りが広がる至福の一皿。'">
+            <img src="img/wagyu_cutlet_double_texture.jpg" class="card-img-top" alt="Bolognese Tagliatelle">
+            <div class="card-body">
+              <h5 class="card-title">Bolognese Tagliatelle</h5>
+              <p class="card-subtitle text-muted">自家製タリアテッレのボロネーゼ</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Slide 5: 牛フィレのカツレツ -->
+        <div class="swiper-slide">
+          <a href="img/08_red_snapper_soup_vertical_1600w.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Milanese-style Beef Cutlet'; description: '中心はレア、衣はサクッ。三種の塩とソースで、自分だけのペアリングを。'">
+            <img src="img/08_red_snapper_soup_vertical_1600w.jpg" class="card-img-top" alt="Milanese-style Beef Cutlet">
+            <div class="card-body">
+              <h5 class="card-title">Beef Cutlet Milanese</h5>
+              <p class="card-subtitle text-muted">牛フィレのミラノ風カツレツ</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Slide 6: メイン（魚料理） -->
+        <div class="swiper-slide">
+          <a href="img/06_suzuki_closeup_1600.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Pan-fried Sea Bass'; description: '皮目は香ばしく、身はしっとり。季節のソースで仕上げたシェフのこだわり。'">
+            <img src="img/06_suzuki_closeup_1600.jpg" class="card-img-top" alt="Pan-fried Sea Bass">
+            <div class="card-body">
+              <h5 class="card-title">Pan-fried Sea Bass</h5>
+              <p class="card-subtitle text-muted">スズキのポワレ</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Slide 7: デザート -->
+        <!-- <div class="swiper-slide">
+          <a href="img/" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Seasonal Dessert'; description: '一夜のフィナーレ。季節の果実を使った、目にも舌にも甘美なエンディング。'">
+            <img src="img/" class="card-img-top" alt="Seasonal Dessert">
+            <div class="card-body">
+              <h5 class="card-title">Seasonal Dessert</h5>
+              <p class="card-subtitle text-muted">季節のデザート</p>
+            </div>
+          </a>
+        </div> -->
+
+        <!-- Slide 8: シェフ画像 -->
+        <div class="swiper-slide">
+          <a href="img/hozumi-hero.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Chef’s Commitment'; description: 'このコースは、すべてこの男から始まる。情熱と技術の集大成をご堪能あれ。'">
+            <img src="img/hozumi-hero.jpg" class="card-img-top" alt="Chef Portrait">
+            <div class="card-body">
+              <h5 class="card-title">Chef’s Commitment</h5>
+              <p class="card-subtitle text-muted">料理人の矜持</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      </div>
+
+      </div>
+      <!-- Swiper Navigation -->
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div> -->
+    </div>
+
+    <!-- CTA Button -->
+    <div class="cta-bridge text-center my-5">
+  <a href="#reserve" class="btn btn-gold btn-lg rounded-pill px-5 py-3">
+    空席があるうちに、今すぐ予約
+  </a>
+</div>
+  </div>
+</section>
+
+
   <section id="reserve" class="section text-center">
     <div class="container">
       <h2 class="section-title">ご予約・お問い合わせ</h2>
       <p>席に限りがございますので、お早めにご予約ください。</p>
+      <p class="small text-muted mt-4">※ 営業時間内にお電話してください。</p>
       <a href="tel:08098317607" class="btn btn-gold mt-3">電話で予約する</a>
     </div>
   </section>
 
+  <section class="section bg-light" id="access">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">アクセス</h2>
+    <div class="map-card mx-auto mb-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.036154855408!2d132.76516917617028!3d33.83717822905478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fe5f2e8b7e951%3A0x23fc084c664b5e8!2z44CSNzkwLTAwMDMg5oSb5aqb55yM5p2-5bGx5biC5LiJ55Wq55S677yU5LiB55uu77yR4oiS77yZIOWfjuWNl-ODk-ODqyAxZg!5e0!3m2!1sja!2sjp!4v1752442389502!5m2!1sja!2sjp" 
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="store-info text-muted">
+      <p><strong>店名：</strong> Osteria SPLENDE</p>
+      <p><strong>住所：</strong> 愛媛県松山市三番町4-1-9 城南ビル 1F</p>
+      <p><strong>営業時間：</strong> ランチ 11:30〜14:30 / ディナー 17:30〜22:00（L.O. 21:30）</p>
+      <p><strong>定休日：</strong> 水曜</p>
+      <p><strong>ご予約：</strong>080-9831-7607</p>
+    </div>
+  </div>
+</section>
+
   <!-- Footer -->
-  <footer class="footer text-center">
-    <p>&copy; 2025 Osteria SPLENDE</p>
-  </footer>
+ <footer class="footer text-center">
+    <div class="footer-logo mb-3">
+    <img src="img/splende_logo.png" alt="Osteria Splende ロゴ" height="80">
+  </div>
+  <p>&copy; 2025 Osteria SPLENDE All Rights Reserved.</p>
+  <div class="footer-sns mb-2">
+    <a href="https://www.instagram.com/osteria_splende" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/" class="x"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.tiktok.com" class="tiktok"><i class="fab fa-tiktok"></i></a>
+  </div>
+  <div class="footer-nav mt-2">
+    <a href="#top" class="text-light mx-2">トップ</a>
+  </div>
+
+</footer>
+<!-- Fixed CTA Button for Mobile -->
+<div class="cta-fixed d-md-none">
+  <a href="#reserve" class="cta-fixed-btn">
+    📞 今すぐ予約する
+  </a>
+</div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    
     
 let swiperInstances = {};
 const initializedTabs = {};
@@ -713,6 +925,8 @@ function initSwiper(tabId, swiperClass) {
     },
   });
 }
+
+
 
 // タブが表示された瞬間に初期化＆修正処理
 document.querySelectorAll('[data-bs-toggle="tab"]').forEach(button => {
@@ -755,7 +969,7 @@ button.addEventListener("shown.bs.tab", e => {
     initializedTabs[targetId] = true;
   }
 
-  // ⚠️ Swiperの崩壊対策：描画後に再update（これ重要）
+  //  Swiperの崩壊対策：描画後に再update（これ重要）
   requestAnimationFrame(() => {
     setTimeout(() => {
       const swiper = swiperInstances[targetId];
@@ -770,7 +984,50 @@ button.addEventListener("shown.bs.tab", e => {
 
 
 </script>
+<script>
+ let splendeSwiper;
 
+function initSplendeSwiper() {
+  const isMobile = window.innerWidth < 768;
+
+  if (splendeSwiper) splendeSwiper.destroy(true, true); // 再初期化のために一旦破壊（情緒的）
+
+  splendeSwiper = new Swiper('.splendeSwiper', {
+    loop: true,
+    autoplay: !isMobile
+      ? {
+          delay: 5000,
+          disableOnInteraction: false,
+        }
+      : false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
+
+window.addEventListener('load', initSplendeSwiper);
+window.addEventListener('resize', () => {
+  // 画面サイズ変わったらSwiperを再初期化
+  initSplendeSwiper();
+});
+
+</script>
 <script>
   const lightbox = GLightbox({
   selector: ".glightbox",
@@ -789,7 +1046,28 @@ button.addEventListener("shown.bs.tab", e => {
   },
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth < 768) {
+    const el = document.getElementById("hozumiText");
+    if (el) {
+      el.innerHTML = el.innerHTML.replace(/<br\s*\/?>/g, " ");
+    }
+  }
+});
 
+
+</script>
+  <script>
+  window.addEventListener("scroll", function () {
+    const cta = document.querySelector(".cta-fixed");
+    if (window.scrollY > 300) {
+      cta.classList.add("show");
+    } else {
+      cta.classList.remove("show");
+    }
+  });
+</script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
