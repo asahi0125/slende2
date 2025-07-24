@@ -508,7 +508,12 @@ a.menu-card:hover {
     transform: scale(1);
   }
 }
-
+@media (max-width: 767px) {
+  .swiper-slide {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
 
 /* === レスポンシブ調整 === */
 @media (max-width: 768px) {
@@ -553,6 +558,7 @@ a.menu-card:hover {
 .accordion-button:hover {
   background-color: #ece9e3;
 }
+
 
 .accordion-button::after {
   filter: grayscale(100%) brightness(70%);
@@ -775,19 +781,6 @@ a.menu-card:hover {
       padding: 40px 0;
     }
 
-.footer-sns a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  margin: 0 8px;
-  border-radius: 50%;
-  font-size: 1.4rem;
-  color: white;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
 
 /* 個別スタイル */
 .footer-sns a {

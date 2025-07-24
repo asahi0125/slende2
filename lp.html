@@ -24,6 +24,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -85,56 +86,39 @@
     <div class="tab-content" id="menuTabContent">
       <div class="tab-pane fade show active" id="lunch">
         <!-- LUNCHのswiperここに -->
-          <div class="swiper lunch-swiper">
-          <div class="swiper-wrapper">
-         <div class="swiper-slide">
-          <div class="ribbon">おすすめ</div>
-          <a href="img/lunchset.jpg"
-            class="glightbox card menu-card h-100"
-            data-gallery="lunch"
-            data-glightbox="title: '本日のパスタランチ（季節のパスタ）'; description: '全てのランチにスープ・サラダ・バケットが付きます。<br>※写真はホタルイカのパスタランチです<br><strong>¥1,738</strong>'">
-            
-            <img src="img/lunchset.jpg" class="card-img-top" alt="本日のパスタランチ（季節のパスタ）" />
-            
-            <div class="card-body">
-              <h5 class="card-title">本日のパスタランチ（季節のパスタ）</h5>
-              <p class="card-text">スープ・サラダ・バケット付き。写真はホタルイカ。</p>
-              <p class="fw-bold">¥1,738</p>
-            </div>
-          </a>
-        </div>
+        
         <div class="swiper-slide">
-          <a href="img/lunchcourse.jpg"
+         <a href="img/seaurchin.jpg"
             class="glightbox card menu-card h-100"
             data-gallery="lunch"
-            data-glightbox="title: 'Lunchコース'; description: 'スープ・前菜盛り合わせ（約9品）・パスタ・肉料理（鶏 or 鴨）<br><br><strong>鶏：¥2,800</strong><br><strong>鴨：¥3,800</strong><br><br>前日予約で¥5,000のコース（魚料理＋牛肉料理）もございます<br><strong>¥3,080〜</strong>'">
-            
-            <img src="img/lunchcourse.jpg" class="card-img-top" alt="Lunchコース" />
-            
-            <div class="card-body">
-              <h5 class="card-title">Lunchコース</h5>
-              <p class="card-text">前菜9品・スープ・パスタ・肉料理の充実コース。前日予約で魚＋牛の特別コースも。</p>
-              <p class="fw-bold">¥3,080〜</p>
+            data-glightbox="
+              title: 'Sea Urchin Toast Blossom',
+              description: '雲丹のトースト・花仕立て<br>見た目も美しい、濃厚な海の香り<br><strong>¥1,900</strong>'">
+              <img src="img/seaurchin.jpg" class="card-img-top" alt="Sea Urchin Toast" />
+              <div class="card-body">
+                <h5 class="card-title">Sea Urchin Toast Blossom</h5>
+                <p class="card-text">見た目も美しい、濃厚な海の香り</p>
+                <p class="fw-bold">¥1,900</p>
+              </div>
+            </a>
             </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="img/Sardine Oil Pasta.jpg"
-            class="glightbox card menu-card h-100"
-            data-gallery="lunch"
-            data-glightbox="title: '大羽イワシのオイルパスタ'; description: '新鮮な大羽イワシをふんだんに使用。<br>シェフ特製のブロードで丁寧に仕上げた、開店以来の看板メニュー。<br><em>使用パスタ：イタリア・モノグラーノ社 高級乾麺</em><br><strong>¥1,518</strong>'">
-            
-            <img src="img/Sardine Oil Pasta.jpg" class="card-img-top" alt="大羽イワシのオイルパスタ" />
-            
-            <div class="card-body">
-              <h5 class="card-title">大羽イワシのオイルパスタ</h5>
-              <p class="card-text">
-                看板メニューの貫禄。イワシ×ブロード×モノグラーノ＝旨みの暴力。
-              </p>
-              <p class="fw-bold">¥1,518</p>
-            </div>
-          </a>
-        </div>
+              <div class="swiper-slide">
+                <a href="img/Sardine Oil Pasta.jpg"
+                  class="glightbox card menu-card h-100"
+                  data-gallery="lunch"
+                  data-glightbox="title: '大羽イワシのオイルパスタ'; description: '新鮮な大羽イワシをふんだんに使用。<br>シェフ特製のブロードで丁寧に仕上げた、開店以来の看板メニュー。<br><em>使用パスタ：イタリア・モノグラーノ社 高級乾麺</em><br><strong>¥1,518</strong>'"
+                >
+                  <img src="img/Sardine Oil Pasta.jpg" class="card-img-top" alt="大羽イワシのオイルパスタ" />
+
+                  <div class="card-body">
+                    <h5 class="card-title">大羽イワシのオイルパスタ</h5>
+                    <p class="card-text">
+                      看板メニューの貫禄。イワシ×ブロード×モノグラーノ＝旨みの暴力。
+                    </p>
+                    <p class="fw-bold">¥1,518</p>
+                  </div>
+                </a>
+              </div>
             <div class="swiper-slide">
             <a href="img/wagyu_cutlet_double_texture.jpg"
               class="glightbox card menu-card h-100"
@@ -887,7 +871,7 @@
 <!-- Fixed CTA Button for Mobile -->
 <div class="cta-fixed d-md-none">
   <a href="#reserve" class="cta-fixed-btn">
-    📞 今すぐ予約する
+     今すぐ予約する
   </a>
 </div>
 
@@ -895,6 +879,43 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<!-- ScrollTrigger plugin -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// セクションタイトルをゆっくりフェードイン
+gsap.from(".section-title", {
+  opacity: 0,
+  y: 40,
+  duration: 1.2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".section-title",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+
+// メニューカードのふわっと登場（複数対応）
+gsap.from(".menu-card", {
+  opacity: 0,
+  y: 50,
+  duration: 0.8,
+  stagger: 0.2,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".menu-card",
+    start: "top 85%",
+    toggleActions: "play none none none"
+  }
+});
+
+
+</script>
+
   <script>
     
     
