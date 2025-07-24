@@ -749,7 +749,7 @@ a.menu-card:hover {
   margin-top: 1.5rem;
 }
 /* Access */
- .map-card {
+ /* .map-card {
       max-width: 800px;
       aspect-ratio: 4 / 3;
       border-radius: 16px;
@@ -770,9 +770,30 @@ a.menu-card:hover {
     .store-info strong {
       color: #333;
       font-weight: 600;
-    }
+    } */
+    .map-thumbnail img {
+  border: 2px solid goldenrod;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+  max-width: 800px;
+}
+.map-thumbnail img:hover {
+  transform: scale(1.02);
+}
 
+.border-gold {
+  border: 3px solid goldenrod;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.map-thumbnail:hover .border-gold {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
+}
+.border-gold {
+  border: 4px solid gold;
+}
 
 /* === Footer === */
 .footer {
@@ -780,7 +801,25 @@ a.menu-card:hover {
       color: white;
       padding: 40px 0;
     }
+.footer-nav a,
+.footer-nav a:hover {
+  text-decoration: none;
+}
 
+/* 個別スタイル */
+.footer-sns a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 8px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: white;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
 
 /* 個別スタイル */
 .footer-sns a {
@@ -813,7 +852,7 @@ a.menu-card:hover {
 /* Hover Effects */
 .footer-sns a:hover {
   transform: scale(1.1);
-  opacity: 0.;
+  opacity: 0.9;
 }
 .footer-logo img {
   max-height: 80px;

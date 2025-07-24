@@ -462,7 +462,7 @@ h1, .display-4 {
 }
  
 
-   .map-card {
+   /* .map-card {
       max-width: 800px;
       aspect-ratio: 4 / 3;
       border-radius: 16px;
@@ -473,8 +473,29 @@ h1, .display-4 {
     .map-card iframe {
       width: 100%;
       height: 100%;
-      border: none;
+      border: none; */
+
+     .map-thumbnail img {
+      border: 2px solid goldenrod;
+      border-radius: 18px;
+      transition: transform 0.3s ease;
+      max-width: 800px;
     }
+    .map-thumbnail img:hover {
+      transform: scale(1.02);
+    }
+
+    .border-gold {
+      border: 3px solid goldenrod;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .map-thumbnail:hover .border-gold {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(218, 165, 32, 0.5);
+    }
+    
     .store-info p {
       margin-bottom: 6px;
       font-size: 0.95rem;
@@ -540,6 +561,11 @@ h1, .display-4 {
   opacity: 0.9;
 }
 
+.footer-nav a,
+.footer-nav a:hover {
+  text-decoration: none;
+}
+
 .footer-logo img {
   max-height: 80px;
   object-fit: contain;
@@ -571,7 +597,7 @@ h1, .display-4 {
 }
 
 .cta-text {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
@@ -579,7 +605,7 @@ h1, .display-4 {
 /* ▼ 固定CTA表示用：位置とレイアウト */
 .sticky-cta {
   position: fixed;
-  bottom: 30px;
+  bottom: 20px;
   right: 20px;
   z-index: 999;
   text-align: center;

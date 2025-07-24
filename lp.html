@@ -55,6 +55,13 @@
 
       </div>
     </div>
+    <div class="modal fade" id="hozumiModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-transparent border-0">
+      <img src="img/splende_chef_kitchen_scene.jpg" class="img-fluid rounded" alt="厨房で仕込むオーナーシェフ">
+    </div>
+  </div>
+</div>
   </div>
 </section>
 
@@ -819,11 +826,11 @@
 
         <!-- Slide 8: シェフ画像 -->
         <div class="swiper-slide">
-          <a href="img/hozumi-hero.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Chef’s Commitment'; description: 'このコースは、すべてこの男から始まる。情熱と技術の集大成をご堪能あれ。'">
+          <a href="img/hozumi-hero.jpg" class="glightbox card menu-card h-100" data-gallery="splende" data-glightbox="title: 'Chef’s Commitment'; description: 'すべては、この男の一皿から始まる。技と静かな情熱に満ちた、コース料理を体験。'">
             <img src="img/hozumi-hero.jpg" class="card-img-top" alt="Chef Portrait">
             <div class="card-body">
               <h5 class="card-title">Chef’s Commitment</h5>
-              <p class="card-subtitle text-muted">料理人の矜持</p>
+              <p class="card-subtitle text-muted">技と情熱の、火入れ。</p>
             </div>
           </a>
         </div>
@@ -852,18 +859,31 @@
     <div class="container">
       <h2 class="section-title">ご予約・お問い合わせ</h2>
       <p>席に限りがございますので、お早めにご予約ください。</p>
-      <p class="small text-muted mt-4">※ 営業時間内にお電話してください。</p>
+      <p class="small text-muted mt-4">※お電話は営業時間内にて承っております。</p>
       <a href="tel:08098317607" class="btn btn-gold mt-3">電話で予約する</a>
     </div>
   </section>
 
-  <section class="section bg-light" id="access">
-  <div class="container text-center">
+<section class="section bg-light" id="access">
+  <div class="container text-center" data-aos="fade-up">
     <h2 class="section-title mb-4">アクセス</h2>
-    <div class="map-card mx-auto mb-4">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.036154855408!2d132.76516917617028!3d33.83717822905478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fe5f2e8b7e951%3A0x23fc084c664b5e8!2z44CSNzkwLTAwMDMg5oSb5aqb55yM5p2-5bGx5biC5LiJ55Wq55S677yU5LiB55uu77yR4oiS77yZIOWfjuWNl-ODk-ODqyAxZg!5e0!3m2!1sja!2sjp!4v1752442389502!5m2!1sja!2sjp" 
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- サムネイル画像（中央寄せ＆整形） -->
+    <div class="map-thumbnail mx-auto mb-4" style="max-width: 500px;" data-bs-toggle="modal" data-bs-target="#mapModal">
+      <img src="img/splende_nightmode_glowup.jpg" alt="Google Map Thumbnail" class="img-fluid rounded border-gold shadow w-100">
+      <p class="small text-muted mt-2">▶ 地図を開く</p>
     </div>
+
+    <!-- 「現在地からルート検索」ボタン -->
+    <div class="mb-4">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=33.83717822905478,132.76516917617028" 
+         class="btn btn-outline-dark rounded-pill px-4 shadow-sm" 
+         target="_blank" rel="noopener noreferrer">
+        📍 現在地からルート検索
+      </a>
+    </div>
+
+    <!-- 店舗情報 -->
     <div class="store-info text-muted">
       <p><strong>店名：</strong> Osteria SPLENDE</p>
       <p><strong>住所：</strong> 愛媛県松山市三番町4-1-9 城南ビル 1F</p>
@@ -873,6 +893,24 @@
     </div>
   </div>
 </section>
+
+<!-- Google Map モーダル -->
+<div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.036154855408!2d132.76516917617028!3d33.83717822905478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fe5f2e8b7e951%3A0x23fc084c664b5e8!2z44CSNzkwLTAwMDMg5oSb5aqb55yM5p2-5bGx5biC5LiJ55Wq55S677yU5LiB55uu77yR4oiS77yZIOWfjuWNl-ODk-ODqyAxZg!5e0!3m2!1sja!2sjp!4v1752442389502!5m2!1sja!2sjp"
+          width="100%" height="600" style="border:0;" 
+          allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
   <!-- Footer -->
  <footer class="footer text-center">
@@ -887,7 +925,7 @@
     <a href="https://www.tiktok.com" class="tiktok"><i class="fab fa-tiktok"></i></a>
   </div>
   <div class="footer-nav mt-2">
-    <a href="#top" class="text-light mx-2">トップ</a>
+    <a href="#top" class="text-light mx-2">トップへ戻る</a>
   </div>
 
 </footer>
