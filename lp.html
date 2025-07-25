@@ -58,7 +58,7 @@
     <div class="modal fade" id="hozumiModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content bg-transparent border-0">
-      <img src="img/splende_bottles_closeup_winewall.jpg" class="img-fluid rounded" alt="">
+      <img src="img/splende_bottles_closeup_winewall.jpg" class="img-fluid rounded" alt="厨房で仕込むオーナーシェフ">
     </div>
   </div>
 </div>
@@ -961,7 +961,7 @@
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-let swiperInstances = {};
+ let swiperInstances = {};
 const initializedTabs = {};
 
 function initSwiper(tabId, swiperClass) {
@@ -969,19 +969,21 @@ function initSwiper(tabId, swiperClass) {
   const container = document.querySelector(`#${tabId} .${swiperClass}`);
   if (!container) return;
 
-  // すでに初期化済みなら一旦破壊
   if (swiperInstances[tabId]) {
     swiperInstances[tabId].destroy(true, true);
   }
 
   const slides = container.querySelectorAll('.swiper-slide');
-  const shouldLoop = !isMobile && slides.length > 3;
+  const shouldLoop = slides.length > (isMobile ? 1 : 3);
 
   swiperInstances[tabId] = new Swiper(container, {
-    slidesPerView: !isMobile && slides.length? 1.2 : 3,
+    slidesPerView: isMobile ? 1.2 : 3,
     spaceBetween: 16,
-    loop: shouldLoop,
-    autoplay: shouldLoop ? { delay: 3000 } : false,
+    loop: shouldLoop, // ← スマホでもloop許可
+    autoplay: !isMobile && shouldLoop ? {
+      delay: 3000,
+      disableOnInteraction: false
+    } : false,
     pagination: {
       el: `#${tabId} .swiper-pagination`,
       clickable: true,
@@ -989,32 +991,28 @@ function initSwiper(tabId, swiperClass) {
   });
 }
 
-
-
-// タブが表示された瞬間に初期化＆修正処理
 document.querySelectorAll('[data-bs-toggle="tab"]').forEach(button => {
   button.addEventListener("shown.bs.tab", e => {
     const targetId = e.target.getAttribute("data-bs-target").replace("#", "");
 
-    // 初期化してないなら今やる
     if (!initializedTabs[targetId]) {
       initSwiper(targetId, `${targetId}-swiper`);
       initializedTabs[targetId] = true;
     }
 
-    // 表示された後に強制 update で1段に揃える
-    setTimeout(() => {
-      const swiper = swiperInstances[targetId];
-      if (swiper) {
-        swiper.update();
-        swiper.updateSize();
-        swiper.slideTo(0);
-      }
-    }, 50);
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        const swiper = swiperInstances[targetId];
+        if (swiper) {
+          swiper.update();
+          swiper.updateSize();
+          swiper.slideTo(0, 0);
+        }
+      }, 100);
+    });
   });
 });
 
-// 最初のアクティブタブだけ自動初期化
 document.addEventListener("DOMContentLoaded", () => {
   const active = document.querySelector(".tab-pane.active.show");
   const activeId = active?.id;
@@ -1023,26 +1021,55 @@ document.addEventListener("DOMContentLoaded", () => {
     initializedTabs[activeId] = true;
   }
 });
-button.addEventListener("shown.bs.tab", e => {
-  const targetId = e.target.getAttribute("data-bs-target").replace("#", "");
 
-  // 初期化済みでも再描画時に再調整したい
-  if (!initializedTabs[targetId]) {
-    initSwiper(targetId, `${targetId}-swiper`);
-    initializedTabs[targetId] = true;
-  }
-
-  //  Swiperの崩壊対策：描画後に再update（これ重要）
-  requestAnimationFrame(() => {
-    setTimeout(() => {
-      const swiper = swiperInstances[targetId];
-      if (swiper) {
-        swiper.update();
-        swiper.updateSize();
-        swiper.slideTo(0, 0); // 位置リセットも保険で
-      }
-    }, 100); // 描画落ち着くまでタイミング調整
+window.addEventListener("resize", () => {
+  Object.keys(initializedTabs).forEach(tabId => {
+    initSwiper(tabId, `${tabId}-swiper`);
   });
+});
+
+</script>
+<script>
+ let splendeSwiper;
+
+function initSplendeSwiper() {
+  const isMobile = window.innerWidth < 768;
+
+  if (splendeSwiper) splendeSwiper.destroy(true, true); // 再初期化のために一旦破壊
+
+  splendeSwiper = new Swiper('.splendeSwiper', {
+    loop: true,
+    autoplay: !isMobile
+      ? {
+          delay: 5000,
+          disableOnInteraction: false,
+        }
+      : false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+}
+
+window.addEventListener('load', initSplendeSwiper);
+window.addEventListener('resize', () => {
+  // 画面サイズ変わったらSwiperを再初期化
+  initSplendeSwiper();
 });
 
 </script>
