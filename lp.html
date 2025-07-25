@@ -58,7 +58,7 @@
     <div class="modal fade" id="hozumiModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content bg-transparent border-0">
-      <img src="img/splende_chef_kitchen_scene.jpg" class="img-fluid rounded" alt="厨房で仕込むオーナーシェフ">
+      <img src="img/splende_bottles_closeup_winewall.jpg" class="img-fluid rounded" alt="">
     </div>
   </div>
 </div>
@@ -961,8 +961,6 @@
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    
-    
 let swiperInstances = {};
 const initializedTabs = {};
 
@@ -977,15 +975,13 @@ function initSwiper(tabId, swiperClass) {
   }
 
   const slides = container.querySelectorAll('.swiper-slide');
-  const shouldLoop = slides.length > (isMobile ? 1 : 3);
+  const shouldLoop = !isMobile && slides.length > 3;
 
   swiperInstances[tabId] = new Swiper(container, {
-    slidesPerView: isMobile ? 1.2 : 3,
+    slidesPerView: !isMobile && slides.length? 1.2 : 3,
     spaceBetween: 16,
     loop: shouldLoop,
-    autoplay: shouldLoop ? { 
-      delay: 3000, disableOnInteraction:false
-     } : false,
+    autoplay: shouldLoop ? { delay: 3000 } : false,
     pagination: {
       el: `#${tabId} .swiper-pagination`,
       clickable: true,
@@ -1049,51 +1045,6 @@ button.addEventListener("shown.bs.tab", e => {
   });
 });
 
-
-</script>
-<script>
- let splendeSwiper;
-
-function initSplendeSwiper() {
-  const isMobile = window.innerWidth < 768;
-
-  if (splendeSwiper) splendeSwiper.destroy(true, true); // 再初期化のために一旦破壊（情緒的）
-
-  splendeSwiper = new Swiper('.splendeSwiper', {
-    loop: true,
-    autoplay: !isMobile
-      ? {
-          delay: 5000,
-          disableOnInteraction: false,
-        }
-      : false,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-}
-
-window.addEventListener('load', initSplendeSwiper);
-window.addEventListener('resize', () => {
-  // 画面サイズ変わったらSwiperを再初期化
-  initSplendeSwiper();
-});
-
 </script>
 <script>
   const lightbox = GLightbox({
@@ -1102,11 +1053,11 @@ window.addEventListener('resize', () => {
   loop: true,
   closeOnOutsideClick: true,
   onOpen: () => {
-    // Swiperのautoplayを全部止める（ポップアップ中）
+    // Swiperのautoplayを全部止める
     Object.values(swiperInstances).forEach(swiper => swiper?.autoplay?.stop());
   },
   onClose: () => {
-    // 再開はPCだけ（モバイルはうるさい）
+    // 再開はPCだけ
     Object.values(swiperInstances).forEach(swiper => {
       if (window.innerWidth >= 768) swiper?.autoplay?.start();
     });
