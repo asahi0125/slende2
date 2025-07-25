@@ -959,6 +959,38 @@ a.menu-card:hover {
   width: 100% !important;
   border-radius: 12px !important;
 }
+.border-gold {
+  border: 2px solid gold!important;
+}
+
+/* モーダル閉じるボタンのデザイン */
+.btn-close {
+  top: 12px;
+  right: 12px;
+  z-index: 1055;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 0.6rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* モバイルで少し大きく押しやすく */
+@media (max-width: 576px) {
+  .btn-close {
+    top: 8px;
+    right: 8px;
+    padding: 0.9rem;
+  }
+}
+
+/* モーダルの外枠を高級感ある角丸と影で演出 */
+.modal-content {
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
 /* ボタンセクションの配置と余白 */
 .return-to-top {
   text-align: center;
