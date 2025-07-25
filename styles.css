@@ -9,6 +9,38 @@ body {
 }
 html, body {
   overflow-x: hidden;
+    width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* フルブリード専用ユーティリティ */
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  /* セクション自体が横に溢れないように */
+  overflow-x: hidden;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  max-width: 100%;
+}
+.swiper-container {
+  min-height: 100vh;
+  height: 100dvh; /* iOS Safari対応用：2023年以降の安全な指定 */
+  overflow: hidden;
 }
 
 img {
@@ -115,7 +147,15 @@ section {
   margin: 0.5rem 0;
   opacity: 0.9;
 }
-
+/* モバイルで背景固定を解除 */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+  .ribbon {
+    left: 0;
+  }
+}
 .btn-hero {
   display: inline-block;
   margin-top: 2rem;
@@ -912,4 +952,59 @@ a.menu-card:hover {
   .hozumi-inner {
     flex-direction: column;
   }
+}
+
+/* ボタンセクションの配置と余白 */
+.return-to-top {
+  text-align: center;
+  margin: 80px 0 60px;
+}
+
+/* 戻るボタンデザイン */
+.return-button {
+  display: inline-block;
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  background-color: #fdfdfc;
+  border: 2px solid gold;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* ホバー時：ゴールドグラデーション＋白抜き文字 */
+.return-button:hover {
+  background: linear-gradient(to right, #d1a954, #e6c68a);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.map-container iframe {
+  height: 360px !important;
+  width: 100% !important;
+  border-radius: 12px !important;
+}
+
+.custom-return-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #111;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.custom-return-btn:hover {
+  background-color: #333;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }

@@ -864,17 +864,18 @@
     </div>
   </section>
 
+<!-- アクセス セクション -->
 <section class="section bg-light" id="access">
   <div class="container text-center" data-aos="fade-up">
     <h2 class="section-title mb-4">アクセス</h2>
 
-    <!-- サムネイル画像（中央寄せ＆整形） -->
+    <!-- 地図サムネイル（モーダル起動） -->
     <div class="map-thumbnail mx-auto mb-4" style="max-width: 500px;" data-bs-toggle="modal" data-bs-target="#mapModal">
       <img src="img/splende_nightmode_glowup.jpg" alt="Google Map Thumbnail" class="img-fluid rounded border-gold shadow w-100">
       <p class="small text-muted mt-2">▶ 地図を開く</p>
     </div>
 
-    <!-- 「現在地からルート検索」ボタン -->
+    <!-- 現在地からのルート検索 -->
     <div class="mb-4">
       <a href="https://www.google.com/maps/dir/?api=1&destination=33.83717822905478,132.76516917617028" 
          class="btn btn-outline-dark rounded-pill px-4 shadow-sm" 
@@ -889,20 +890,28 @@
       <p><strong>住所：</strong> 愛媛県松山市三番町4-1-9 城南ビル 1F</p>
       <p><strong>営業時間：</strong> ランチ 11:30〜14:30 / ディナー 17:30〜22:00（L.O. 21:30）</p>
       <p><strong>定休日：</strong> 水曜</p>
-      <p><strong>ご予約：</strong>080-9831-7607</p>
+      <p><strong>ご予約：</strong> <a href="tel:08098317607">080-9831-7607</a></p>
     </div>
   </div>
 </section>
 
 <!-- Google Map モーダル -->
-<div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+<div class="modal fade" id="mapModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content position-relative">
+      
+      <!-- 閉じるボタン -->
+      <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="閉じる"></button>
+      
+      <!-- Google Map iframe -->
       <div class="modal-body p-0">
         <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.036154855408!2d132.76516917617028!3d33.83717822905478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fe5f2e8b7e951%3A0x23fc084c664b5e8!2z44CSNzkwLTAwMDMg5oSb5aqb55yM5p2-5bGx5biC5LiJ55Wq55S677yU5LiB55uu77yR4oiS77yZIOWfjuWNl-ODk-ODqyAxZg!5e0!3m2!1sja!2sjp!4v1752442389502!5m2!1sja!2sjp"
-          width="100%" height="600" style="border:0;" 
-          allowfullscreen="" loading="lazy" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.392313125839!2d132.7630316763368!3d33.83717817324861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354f8995b4c4d3c7%3A0x7953ef050865a40a!2z44CSNzkwLTA4MjMg6Iy25bKh55yM5p2-5rWc5biC5LiK5a6Y77yS5LiK6KW_5a6u77yT!5e0!3m2!1sja!2sth!4v1721872930492!5m2!1sja!2sth" 
+          width="100%" 
+          height="600" 
+          style="border:0;" 
+          allowfullscreen 
+          loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
@@ -910,6 +919,11 @@
   </div>
 </div>
 
+
+<!-- トップへ戻るリンク（下部固定で高級ボタン） -->
+<div class="text-center my-5">
+  <a href="index.html" class="return-button">トップページへ戻る</a>
+</div>
 
 
   <!-- Footer -->
