@@ -954,6 +954,11 @@ a.menu-card:hover {
   }
 }
 
+ iframe {
+  height: 360px !important;
+  width: 100% !important;
+  border-radius: 12px !important;
+}
 /* ボタンセクションの配置と余白 */
 .return-to-top {
   text-align: center;
@@ -983,28 +988,6 @@ a.menu-card:hover {
   transform: translateY(-2px);
 }
 
-.map-container iframe {
-  height: 360px !important;
-  width: 100% !important;
-  border-radius: 12px !important;
-}
 
-.custom-return-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #111;
-  color: #fff !important;
-  text-decoration: none !important;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
 
-.custom-return-btn:hover {
-  background-color: #333;
-  color: #fff !important;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
+
