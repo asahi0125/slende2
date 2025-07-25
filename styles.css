@@ -200,12 +200,13 @@ section {
 }
 
 .hozumi-sub {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: #4e443c;
   line-height: 1.8;
   font-family: 'Noto Serif JP', serif;
  margin-top: 1.5rem;
+ text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -258,6 +259,11 @@ section {
   .hozumi-sub {
     font-size: 0.95rem;
     padding: 0 1rem;
+    line-height: 1.9;
+    text-align: center;
+  }
+  .hozumi-sub br {
+    display: none;
   }
 
   .section-title {
@@ -583,7 +589,7 @@ a.menu-card:hover {
   margin: 0 auto;
 }
 
-/* アコーディオンヘッダー（詩的ジャンル） */
+
 .accordion-button {
   font-family: 'Noto Serif JP', serif;
   font-size: 1.05rem;
@@ -604,7 +610,7 @@ a.menu-card:hover {
   filter: grayscale(100%) brightness(70%);
 }
 
-/* アコーディオン本文 */
+
 .accordion-body {
   font-size: 0.95rem;
   line-height: 1.8;
@@ -616,12 +622,12 @@ a.menu-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-/* アコーディオンの開閉演出 */
+
 .accordion-collapse {
   transition: all 0.4s ease;
 }
 
-/* 小さな補足文 */
+
 .accordion-body .text-muted.small {
   font-size: 0.85rem;
   color: #a3927c;
@@ -787,6 +793,55 @@ a.menu-card:hover {
 
 #reserve .btn-gold {
   margin-top: 1.5rem;
+}
+
+/* アコーディオン全体 */
+.accordion-qa {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* アコーディオンアイテム */
+.accordion-item-qa {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ヘッダー（ボタン） */
+.accordion-button-qa {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 1.25rem;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.accordion-button-qa:not(.collapsed) {
+  background-color: #eee;
+}
+
+/* コンテンツ */
+.accordion-body-qa {
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* モバイル対策 */
+@media (max-width: 576px) {
+  .accordion-button-qa,
+  .accordion-body-qa {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
 }
 /* Access */
  /* .map-card {
