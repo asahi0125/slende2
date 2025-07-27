@@ -13,7 +13,7 @@
 }
 
  .hero-section {
-  background-image: url('img/splende_nightmode_glowup.jpg'); /* 画像パス */
+  background-image: url('../img/splende_nightmode_glowup.jpg'); /* 画像パス */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

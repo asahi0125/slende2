@@ -97,7 +97,7 @@ section {
 }
 /* === Hero Section === */
 .hero {
-  background-image: url("img/splende_wide_view_nightwalk.jpg"); /* ← 差し替え可 */
+  background-image: url("../img/splende_wide_view_nightwalk.jpg"); /* ← 差し替え可 */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
