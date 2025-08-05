@@ -827,6 +827,19 @@
   </div>
 </section>
 
+<!-- REVIEWセクション -->
+  <section id="review-section" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center mb-4">お客様の声</h2>
+      <div class="swiper review-swiper">
+        <div class="swiper-wrapper" id="google-reviews-container">
+          <!-- JavaScriptでここにswiper-slideが追加される -->
+        </div>
+        <div class="swiper-pagination mt-3"></div>
+      </div>
+    </div>
+  </section>
+
 
   <section id="reserve" class="section text-center">
     <div class="container">
@@ -956,6 +969,9 @@
   <script src="js/lp/lightbox-control-lp.js"></script>
   <script src="js/lp/responsive-text-lp.js"></script>
   <script src="js/lp/scroll-cta-lp.js"></script>
+  <script src="js/lp/review.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWcRM4UbSJOLHgscGUdzphcfuMGPduX84&libraries=places&callback=initMap"></script>
    <script>
     AOS.init();
     new Swiper('.menu-swiper', {
