@@ -827,10 +827,13 @@
   </div>
 </section>
 
-<!-- REVIEWセクション -->
+  <!-- REVIEWセクション -->
   <section id="review-section" class="section bg-light">
     <div class="container">
-      <h2 class="section-title text-center mb-4">お客様の声</h2>
+      <h2 class="section-title text-center mb-4" data-aos="fade-up">お客様の声</h2>
+      <p class="voice-description no-break-mobile text-center" data-aos="fade-up">
+        ご来店いただいたお客様から、たくさんの嬉しいお声を頂いています。<br>
+        大切なひとときを、当店でお過ごしいただいたご感想をご紹介します。</p>
       <div class="swiper review-swiper">
         <div class="swiper-wrapper" id="google-reviews-container">
           <!-- JavaScriptでここにswiper-slideが追加される -->
@@ -838,8 +841,12 @@
         <div class="swiper-pagination mt-3"></div>
       </div>
     </div>
-  </section>
+    <!-- 🔽 モーダル用の全文を埋め込むエリア -->
+    <div id="lightbox-review-popups" style="display: none;"></div>
+    <p class="review-note text-center mt-3" style="font-size: 0.8rem; color: #524949;">
+      ※お客様の声は実際に当店をご利用いただいた方の感想を抜粋・要約したものです。</p>
 
+  </section>
 
   <section id="reserve" class="section text-center">
     <div class="container">
@@ -888,7 +895,7 @@
       <a href="https://www.google.com/maps/dir/?api=1&destination=33.83717822905478,132.76516917617028" 
          class="btn btn-outline-dark rounded-pill px-4 shadow-sm" 
          target="_blank" rel="noopener noreferrer">
-        📍 現在地からルート検索
+        現在地からルート検索
       </a>
     </div>
 

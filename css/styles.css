@@ -1097,12 +1097,19 @@ a.menu-card:hover {
   transform: translateY(-2px);
 }
 
+.review-swiper {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
 .review-swiper .swiper-wrapper {
   display: flex;
   align-items: stretch;
-  /* カード高さ揃える */
+  /* カード高さを揃える */
 }
-
 
 .review-swiper .swiper-slide {
   min-height: 320px;
@@ -1111,87 +1118,140 @@ a.menu-card:hover {
   justify-content: space-between;
 }
 
-
-.review-swiper {
-  max-width: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 0 1rem;
-  /* 左右に余白が必要なら */
-}
-
+/* カード全体 */
 .review-card {
-  max-height: 320px;
-  /* 任意の最大高さ（例：300px） */
-  overflow-y: auto;
-  /* はみ出した分はスクロール */
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  background-color: #fffdf8;
+  /* 少しだけ暖かみのある白 */
+  border-radius: 16px;
+  padding: 24px;
   box-sizing: border-box;
-}
-
-
-.review-card .author {
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.review-card .rating {
-  color: #f5b50a;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.review-card p {
-  flex-grow: 1;
+  border: 1px solid #eee;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  font-family: 'Noto Serif JP', serif;
+  color: #2a2a2a;
   font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.review-card {
+  letter-spacing: 0.015em;
+  line-height: 1.8;
+  overflow-y: auto;
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
   /* IE・Edge */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to bottom right, #fff, #fdfdfd);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Webkit系スクロールバー非表示 */
 .review-card::-webkit-scrollbar {
   display: none;
-  /* Chrome・Safari */
 }
 
-.review-card .rating {
-  color: #f5b50a;
-  font-size: 1.2rem;
+/* ホバーで浮き上がり効果 */
+@media (hover: hover) and (pointer: fine) {
+  .review-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    background-color: #ffffff;
+  }
+}
+
+/* 名前（強調） */
+.review-card .author {
+  font-weight: 700;
+  font-size: 1.05rem;
   margin-bottom: 0.5rem;
-  letter-spacing: 0.05em;
+  color: #111;
 }
 
-.rating {
+/* 評価（星） */
+.review-card .rating {
   display: flex;
   gap: 0.1rem;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-}
-
-.rating .full {
   color: #f5b50a;
+  letter-spacing: 0.05em;
 }
 
-.rating .half {
-  color: #f7d57e;
+/* 投稿日 */
+.review-card .time {
+  font-size: 0.82rem;
+  color: #888;
+  margin-bottom: 0.7rem;
 }
 
-.rating .empty {
-  color: #ccc;
+/* コメント本文 */
+.review-card .comment {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #333;
 }
 
+/* 「続きを読む」リンク */
+.review-card .read-more {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #6a5acd;
+  text-decoration: none;
+  border-top: 1px dotted #ccc;
+  padding-top: 1rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
 
+.review-card .read-more:hover {
+  color: #483d8b;
+  text-decoration: underline;
+}
 
+.review-card a {
+  color: #6c5ce7;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.review-card a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #6c5ce7;
+  transition: width 0.3s ease;
+}
+
+.review-card a:hover::after {
+  width: 100%;
+}
+
+/* スワイパーのページネーション位置調整 */
+.swiper-pagination {
+  position: absolute;
+  bottom: -30px !important;
+  text-align: center;
+  width: 100%;
+}
+
+/* セクション説明文 */
+.voice-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* スマホでは左寄せに */
+@media screen and (max-width: 768px) {
+  .voice-description {
+    text-align: left;
+  }
+}
