@@ -850,27 +850,28 @@
 
 <section id="brand-proof" aria-labelledby="brand-proof-title" style="text-align:center">
   <div class="bp-inner">
-    <h2 id="brand-proof-title" class="bp-title">こちらからもご予約できます。</h2>
+    <h2 id="brand-proof-title" class="bp-title">外部グルメガイド</h2>
 
     <div class="swiper" id="bp-swiper">
       <div class="swiper-wrapper">
         <!-- 食べログ -->
         <div class="swiper-slide">
           <a href="https://tabelog.com/ehime/A3801/A380101/38014828/" target="_blank" rel="noopener" aria-label="食べログ">
-            <img src="img/tabelog.png?v=2"
-                 srcset="img/tabelog.png?v=2 1x, img/tabelog@2x.png?v=2 2x"
+            <img src="img/tabelog.png"
+                 srcset="img/tabelog.png 1x, img/tabelog@2x.png 2x"
                  alt="食べログ" width="192" height="96">
-            <span>食べログ</span>
+            <span>掲載中</span>
           </a>
         </div>
 
         <!-- ぐるなび -->
         <div class="swiper-slide">
           <a href="https://r.gnavi.co.jp/23npw83t0000/" target="_blank" rel="noopener" aria-label="ぐるなび">
-            <img src="img/gurunavi.png?v=2"
-                 srcset="img/gurunavi.png?v=2 1x, img/gurunavi@2x.png?v=2 2x"
+            <img src="img/gurunavi.png"
+                 srcset="img/gurunavi.png 1x, img/gurunavi@2x.png 2x"
+                 onerror="this.onerror=null;this.src='img/grunavi.png';"
                  alt="ぐるなび" width="180" height="90">
-            <span>ぐるなび</span>
+            <span>掲載中</span>
           </a>
         </div>
       </div>
@@ -1012,6 +1013,34 @@
   <script src="js/lp/scroll-cta-lp.js"></script>
   <script src="js/lp/review.js"></script>
   <script src="js/lp/tabelog.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  function ensure(img, one, two) {
+    var dpr = window.devicePixelRatio || 1;
+    var url = (dpr > 1 ? two : one) + '?probe=' + Date.now();
+    var test = new Image();
+    test.onload = function () {
+      if (dpr > 1) {
+        img.src = one + '?v=' + Date.now();
+        img.srcset = one + ' 1x, ' + two + '?v=' + Date.now() + ' 2x';
+      } else {
+        img.srcset = '';
+        img.src = one + '?v=' + Date.now();
+      }
+    };
+    test.onerror = function () {
+      img.srcset = '';                      // 2xが無ければ強制的に1xへ
+      img.src = one + '?v=' + Date.now();
+    };
+    test.src = url;
+  }
+  var g = document.querySelector('img[alt="ぐるなび"]');
+  if (g) ensure(g, 'img/gurunavi.png', 'img/gurunavi@2x.png');
+  var t = document.querySelector('img[alt="食べログ"]');
+  if (t) ensure(t, 'img/tabelog.png', 'img/tabelog@2x.png');
+});
+</script>
+
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWcRM4UbSJOLHgscGUdzphcfuMGPduX84&libraries=places&callback=initMap"></script>
    <script>
