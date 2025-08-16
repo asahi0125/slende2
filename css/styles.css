@@ -1255,3 +1255,224 @@ a.menu-card:hover {
     text-align: left;
   }
 }
+
+/* ===== Brand Proof（薄くならない・フェード壊さない版） ===== */
+
+/* 余白・枠 */
+#brand-proof {
+  padding: 48px 0 56px;
+  background: transparent;
+}
+
+#brand-proof .bp-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 見出し */
+#brand-proof .bp-title {
+  margin: 0 0 18px;
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  letter-spacing: .04em;
+  color: #3b2f27;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Swiper（fade安全セット） */
+#bp-swiper {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bp-swiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bp-swiper .swiper-slide {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* ← フェードは .swiper-slide の opacity を使うため触らない！
+   代わりに“中身だけ”を常に不透明＆フィルタ無しにする */
+#bp-swiper .swiper-slide>a,
+#bp-swiper .swiper-slide>a * {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  text-shadow: none !important;
+}
+
+/* カード見た目（白・影・内側余白UP） */
+#bp-swiper .swiper-slide>a {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 30px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .14);
+  text-decoration: none;
+}
+
+/* ロゴ（くっきり・サイズ指定） */
+#bp-swiper .swiper-slide:first-child img {
+  /* 食べログ */
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+#bp-swiper .swiper-slide:nth-child(2) img {
+  /* ぐるなび */
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* キャプション */
+#bp-swiper .swiper-slide>a span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+/* 備考テキスト */
+#brand-proof .bp-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+}
+
+/* モバイル調整 */
+@media (max-width:768px) {
+  #brand-proof {
+    padding: 36px 0 40px;
+  }
+
+  #bp-swiper {
+    height: 160px;
+  }
+
+  #bp-swiper .swiper-slide>a {
+    padding: 18px 22px;
+    border-radius: 16px;
+  }
+
+  #bp-swiper .swiper-slide:first-child img {
+    height: 72px;
+  }
+
+  #bp-swiper .swiper-slide:nth-child(2) img {
+    height: 68px;
+  }
+
+  #bp-swiper .swiper-slide>a span {
+    font-size: 16px;
+  }
+}
+
+/* ===== くっきり固定：フェードを壊さず、薄さを根絶 ===== */
+
+/* スライドの重ねとトランジション（fade前提） */
+#bp-swiper .swiper-slide {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: opacity .6s ease;
+  /* 何かに付けられたフィルタを無効化（opacityは触らない） */
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* アクティブだけは必ず100%不透明・フィルタ無し */
+#bp-swiper .swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* 非アクティブは完全に0（にじみ防止） */
+#bp-swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
+
+/* 中身（カード＆その子）は常にくっきり。フェードはスライド側で担保 */
+#bp-swiper .swiper-slide>a,
+#bp-swiper .swiper-slide>a * {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  text-shadow: none !important;
+}
+
+/* カードの見た目（白ベタ＆影） */
+#bp-swiper .swiper-slide>a {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 30px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .12);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .14);
+  text-decoration: none;
+}
+
+/* ロゴのサイズ（Retinaでも滲みにくい） */
+#bp-swiper .swiper-slide:first-child img {
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+}
+
+#bp-swiper .swiper-slide:nth-child(2) img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* キャプション（濃いめ） */
+#bp-swiper .swiper-slide>a span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+/* モバイル縮小 */
+@media (max-width:768px) {
+  #bp-swiper .swiper-slide>a {
+    padding: 18px 22px;
+    border-radius: 16px;
+  }
+
+  #bp-swiper .swiper-slide:first-child img {
+    height: 72px;
+  }
+
+  #bp-swiper .swiper-slide:nth-child(2) img {
+    height: 68px;
+  }
+
+  #bp-swiper .swiper-slide>a span {
+    font-size: 16px;
+  }
+}
